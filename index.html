@@ -76,6 +76,22 @@
 
         .social-icons a {
             text-decoration: none;
+            margin-right: 20px; /* Adjust spacing between icons as needed */
+            position: relative;
+            display: inline-block;
+        }
+
+        .social-icons .social-text {
+            position: absolute;
+            bottom: -20px; /* Adjust this value to position the text as per your design */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icons a:hover .social-text {
+            opacity: 1;
         }
 
         .fa-brands {
@@ -85,23 +101,28 @@
         .fa-regular {
             font-size: 32px; /* Adjust the font size to make the icons bigger */
         }
+
         /* Social Icons */
 
+        /* CSS styles to change the color of underline */
+        .custom-underline {
+            border-bottom: 1px solid #6a0dad; /* You can change 'red' to any color you prefer */
+            text-decoration: none; /* Optional: Remove default text underline */
+        }
+        /* CSS styles to change the color of underline */
 
+        
     </style>
 </head>
 <body>
-
     <header>
         <h1>Shaswata Saha</h1>
         <p style="color: #fed136;">Aspiring Finance Enthusiast</p>
     </header>
-
     <section>
         <h2>About Me</h2>
         <p>Hello! I'm Shaswata, a 17-year-old high school graduate with a passion for finance and business. I believe in the power of continuous learning and exploration, and I'm excited to share my journey with you.</p>
     </section>
-
     <section>
         <h2>My Interests</h2>
         <p class="justified-text">At a young age, I've developed a keen interest in the dynamic worlds of finance and business. I am always eager to dive into new concepts and explore the intricacies of the financial markets.</p>
@@ -110,20 +131,18 @@
         <p class="justified-text">I am also interested in AI and machine learning, although I currently have limited knowledge in machine learning. I have some experience using AI technologies.</p>
         <p class="justified-text">I have interests in various fields, but my primary interest lies in trading and the business sector. For contacting me, you can also reach me via email.</p>
     </section>
-
     <section>
         <h2>Connect with Me</h2>
-        <p>Let's connect! Feel free to reach out to me by <a href="https://urls.shaswata.co.in/Shaswata's-Mail" target="_blank">email</a> or <a href="https://urls.shaswata.co.in/Shaswata's-LinkedIn-Account" target="_blank">LinkedIn</a> to explore opportunities, share insights, or simply have a conversation.</p>
+        <p>Let's connect! Feel free to reach out to me by <em><span class="custom-underline"><a href="https://urls.shaswata.co.in/Shaswata's-Mail" target="_blank">email</a></span></em> or <em><span class="custom-underline"><a href="https://urls.shaswata.co.in/Shaswata's-LinkedIn-Account" target="_blank">LinkedIn</a></span></em> to explore opportunities, share insights, or simply have a conversation.</p>
     </section>
     <section>
     <div class="social-icons">
-        <a href="https://urls.shaswata.co.in/Shaswata's-LinkedIn-Account" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i></a>
-        <a href="https://urls.shaswata.co.in/Shaswata's-Twitter-Account" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter" style="color: #1da1f2;"></i></a>
-        <a href="https://urls.shaswata.co.in/Shaswata's-Mail" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-envelope" style="color: #ff9900;"></i></a>
-        <a href="https://urls.shaswata.co.in/Shaswata's-Instagram-Account" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" style="color: #1e3150;"></i></a>
-        <a href="https://urls.shaswata.co.in/Shaswata's-YouTube-Account" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i></a>
+        <a href="https://urls.shaswata.co.in/Shaswata's-LinkedIn-Account" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i><span class="social-text">Shaswata's LinkedIn</span></a>
+        <a href="https://urls.shaswata.co.in/Shaswata's-Twitter-Account" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter" style="color: #1da1f2;"></i><span class="social-text">Shaswata's Twitter</span></a>
+        <a href="https://urls.shaswata.co.in/Shaswata's-Mail" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-envelope" style="color: #ff9900;"></i><span class="social-text">Shaswata's Email</span></a>
+        <a href="http://urls.shaswata.co.in/Shaswata's-Instagram-Account" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" style="color: #1e3150;"></i><span class="social-text">Shaswata's Instagram</span></a>
+        <a href="https://urls.shaswata.co.in/Shaswata's-YouTube-Account" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i><span class="social-text">Shaswata's Youtube</span></a>
       </div>
     </section>
-
 </body>
 </html>
