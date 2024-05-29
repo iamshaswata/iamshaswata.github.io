@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <title>Shaswata Saha - Aspiring Finance Enthusiast</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Shaswata Saha</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>          
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Shaswata Saha</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>          
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Shaswata Saha profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Shaswata Saha</h1>
+        <p class="section__text__p2">Learner | Teader | Chartered Accountant Aspirants</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/shaswatasaha'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>500+ Days <br />Index Trading</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Trading - Invest For Wealth<br/>HS - Howrah Vivekananda Institution<br/>CA Foundation - The Institute of Chartered Accountants of India (ICAI)</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hello, I'm Shaswata. Currently, I am a high school graduate, and at the age of 17, I have a keen interest in learning about the finance and business fields. I have acquired over 500 days of experience in trading, possessing knowledge in technical analysis, market emotions, and some financial concepts. I'm currently preparing for the CA foundation exams while also exploring trading alongside my studies. Additionally, I have a basic understanding of various business industries.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Trading</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Derivatives Trader</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Artificial Intelligence Specialist</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Investor</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <p>
+          With a fervent passion for the dynamic realms of finance and business, I have cultivated a profound interest from a young age. Always eager to delve into new concepts and explore the intricacies of financial markets, I am dedicated to continuous learning and growth.<br><br>In addition to my commitment to mastering the intricacies of finance and business, I am diligently preparing for the CA Foundation examination, recognizing its significance in laying a robust foundation for my career aspirations. This journey underscores my determination to excel in the field and contribute meaningfully to the financial landscape.<br><br>Accumulating over 500 days of hands-on experience in trading, I have refined my skills in technical analysis, gained insights into market emotions, and acquired a comprehensive understanding of various financial concepts. This experiential learning has provided me with invaluable insights that I am eager to apply and disseminate.<br><br>Furthermore, while my proficiency in AI and machine learning is currently at a nascent stage, I am deeply intrigued by their potential applications in finance and business. My exposure to AI technologies has sparked a curiosity to delve deeper into this domain and leverage its capabilities to augment decision-making processes.<br><br>Although my interests span across diverse fields, my primary focus remains on trading and the broader business sector. For further communication, I am readily accessible via email.
+        </p>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="https://urls.shaswata.co.in/Shaswata's-Mail">contact@shaswata.co.in</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://urls.shaswata.co.in/Shaswata's-LinkedIn-Account">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Want to experience Old website click here</p>
+      <p>Copyright &#169; 2024 Shaswata Saha. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
