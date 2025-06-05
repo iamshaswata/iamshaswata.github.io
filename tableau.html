@@ -51,49 +51,72 @@
             font-weight: 500;
         }
 
-        .section h3 {
-            color: #2a6f97;
-            margin-top: 25px;
-            font-size: 1.5em;
-            font-weight: 500;
-        }
-
         p, li {
             font-size: 1.05em;
             color: #555;
         }
 
+        /* NEW STYLES for Download Section Structure */
+        .app-download-container {
+            text-align: center;
+            padding: 25px;
+            background-color: #eaf4ff; /* Light blue highlight */
+            border: 1px dashed #007bff;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .app-download-container h3, .datasets-container h3 {
+            margin-top: 0;
+            color: #1c4e80;
+            font-size: 1.6em;
+            font-weight: 500;
+        }
+        
+        .datasets-container h3 {
+             text-align: center;
+             margin-bottom: 10px;
+        }
+
+        .datasets-container > p {
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+        }
+
+
         /* Download Buttons Container */
         .download-buttons-container {
             display: flex;
             justify-content: space-around;
-            align-items: stretch; /* Make items same height if content differs */
+            align-items: stretch; /* Make items same height */
             flex-wrap: wrap;
-            gap: 25px; /* Space between download items */
-            margin-top: 20px;
+            gap: 25px;
         }
 
         .download-item {
-            flex: 1; /* Each item takes equal space */
-            min-width: 300px; /* Minimum width before wrapping */
+            flex: 1;
+            min-width: 300px;
             padding: 20px;
             border: 1px solid #e7e7e7;
             border-radius: 8px;
             background-color: #fdfdfd;
             display: flex;
-            flex-direction: column; /* Stack content vertically */
-            text-align: center; /* Center text and button */
+            flex-direction: column;
+            text-align: center;
         }
         
-        .download-item p:first-of-type { /* Target the "Step 1/2" paragraph */
+        .download-item > p:first-of-type { /* Targets the Day 1/Day 2 title */
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #1c4e80;
-            margin-bottom: 15px;
+            margin: 0 0 15px 0;
         }
 
         .download-button {
-            display: inline-block; /* Or block with margin auto for centering */
+            display: inline-block;
             color: #ffffff;
             padding: 15px 30px;
             text-decoration: none;
@@ -103,8 +126,8 @@
             text-align: center;
             transition: background-color 0.3s ease, transform 0.2s ease;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-top: 10px; /* Space above button */
-            margin-bottom: 15px; /* Space below button */
+            margin-top: 10px;
+            margin-bottom: 15px;
         }
         .download-button:hover, .download-button:focus {
             transform: translateY(-2px);
@@ -112,14 +135,15 @@
         }
 
         .download-button.primary-download {
-            background-color: #4CAF50; /* Green for main app download */
+            background-color: #28a745; /* Green for main app download */
+            font-size: 1.25em;
         }
         .download-button.primary-download:hover {
-            background-color: #45a049;
+            background-color: #218838;
         }
 
         .download-button.secondary-download {
-            background-color: #007bff; /* Blue for dataset download */
+            background-color: #007bff; /* Blue for dataset downloads */
         }
         .download-button.secondary-download:hover {
             background-color: #0056b3;
@@ -127,7 +151,7 @@
         
         .file-info {
             font-size: 0.9em;
-            color: #6c757d; /* Bootstrap's text-muted color */
+            color: #6c757d;
             margin-top: 5px;
             margin-bottom: 10px;
         }
@@ -135,9 +159,10 @@
         .description-text {
             font-size: 0.95em;
             color: #555;
-            margin-top: 10px;
+            margin-top: auto; /* Pushes this to the bottom */
+            padding-top: 10px;
             line-height: 1.5;
-            text-align: left; /* Align description text left for readability */
+            text-align: left;
         }
         .description-text strong {
             color: #333;
@@ -161,22 +186,11 @@
         .installation-steps ul { padding-left: 25px; list-style-type: disc; margin-top: 8px; }
         .installation-steps ul li { margin-bottom: 6px; }
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-            background-color: #343a40;
-            color: #f8f9fa;
-            font-size: 0.95em;
-        }
-
         @media (max-width: 768px) {
             header h1 { font-size: 2.2em; }
             .section h2 { font-size: 1.8em; }
-            .section h3 { font-size: 1.3em; }
-            .download-button { font-size: 1.1em; padding: 12px 25px; }
-            .download-buttons-container { flex-direction: column; align-items: center; } /* Stack items on smaller screens */
-            .download-item { min-width: 90%; margin-bottom:20px; } /* Adjust width for stacked items */
+            .download-buttons-container { flex-direction: column; align-items: center; }
+            .download-item { min-width: 90%; margin-bottom: 20px; }
         }
 
         @media (max-width: 480px) {
@@ -196,33 +210,46 @@
     <div class="container">
         <section class="section" id="download-section">
             <h2>Get Your Tableau Essentials</h2>
-            <p>Ready to dive into data? Follow these steps to get Tableau Desktop and some sample data to play with!</p>
+
+            <div class="app-download-container">
+                <h3>Step 1: Download Tableau Desktop</h3>
+                <p>You need this software to analyze data and create visualizations. This is a one-time download.</p>
+                <a href="https://downloads.tableau.com/tssoftwareregistered/TableauDesktop-64bit-2025-1-2.exe" download class="download-button primary-download">
+                    Download Tableau Desktop (64-bit)
+                </a>
+            </div>
             
-            <div class="download-buttons-container">
-                <div class="download-item">
-                    <p>Step 1: Get the App</p>
-                    <a href="https://downloads.tableau.com/tssoftwareregistered/TableauDesktop-64bit-2025-1-2.exe" download class="download-button primary-download">
-                        Download Tableau Desktop (64-bit)
-                    </a>
-                    <p class="file-info">File: TableauDesktop-64bit-2025-1-2.exe</p>
-                    <p class="description-text">This is the main software you need to create amazing charts and dashboards.</p>
-                </div>
-                
-                <div class="download-item">
-                    <p>Step 2: Get Sample Data (Optional)</p>
-                    <a href="https://www.dropbox.com/scl/fi/d3p4k6oezx2yix99tyyx5/large_scale_tableau_data.xlsx?rlkey=ewommbvq44bcnb1lj5nm98hi1&dl=1" download="large_scale_tableau_data.xlsx" class="download-button secondary-download">
-                        Download Sample Dataset (Excel file)
-                    </a>
-                    <p class="file-info">File: large_scale_tableau_data.xlsx</p>
-                    <p class="description-text">
-                        <strong>What's this?</strong> It's an Excel spreadsheet filled with sample information (data).<br><br>
-                        <strong>Why download it?</strong> You can use this data with Tableau Desktop to practice making your first charts and reports. It’s perfect if you're just starting out!
-                    </p>
+            <div class="datasets-container">
+                <h3>Step 2: Download a Practice Dataset</h3>
+                <p>After installing Tableau, grab one of our daily datasets to practice with. You don't need to download both!</p>
+
+                <div class="download-buttons-container">
+                    <div class="download-item">
+                        <p>Day 1 Dataset (Yesterday's)</p>
+                        <a href="https://www.dropbox.com/scl/fi/d3p4k6oezx2yix99tyyx5/large_scale_tableau_data.xlsx?rlkey=ewommbvq44bcnb1lj5nm98hi1&dl=1" download="Day1_Dataset_Large_Scale_Data.xlsx" class="download-button secondary-download">
+                            Download Day 1 Data (Excel)
+                        </a>
+                        <p class="file-info">File type: .xlsx (Excel Spreadsheet)</p>
+                        <p class="description-text">
+                            A great starting point with large-scale sales data. Perfect for learning basic charts and data connections.
+                        </p>
+                    </div>
+                    
+                    <div class="download-item">
+                        <p>Day 2 Dataset (Today's)</p>
+                        <a href="https://github.com/Ayushi0214/super-store-sales-dataset/raw/refs/heads/main/super%20store%20sales.zip" download="Day2_Dataset_Super_Store_Sales.zip" class="download-button secondary-download">
+                            Download Day 2 Data (ZIP)
+                        </a>
+                        <p class="file-info">File type: .zip (Compressed Folder)</p>
+                        <p class="description-text">
+                           <strong>Important:</strong> This is a ZIP file. After downloading, you must <strong>right-click and "Extract All"</strong> to get the Excel file inside before you can use it in Tableau.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="section" id="tutorial-section">
-            <h2>Installation Tutorial 🧑‍🏫</h2>
+            <h2>Installation & Setup Tutorial 🧑‍🏫</h2>
             <p>Follow along with our video guide for a smooth installation process, or use the step-by-step instructions below.</p>
             
             <video controls> 
@@ -230,26 +257,25 @@
                 Your browser does not support the video tag. Please try updating your browser or use the text instructions below.
             </video>
 
-            <h3>Step-by-Step Installation Guide:</h3>
+            <h3>Step-by-Step Guide:</h3>
             <div class="installation-steps">
                 <ol>
-                    <li><strong>Download the Installer:</strong> Click the "Download Tableau Desktop" button in Step 1 above. Save the `TableauDesktop-64bit-2025-1-2.exe` file.</li>
-                    <li><strong>Run the Installer:</strong> Find the downloaded file and double-click it.</li>
-                    <li><strong>Accept License Agreement:</strong> Read and accept the terms, then click "Install."</li>
-                    <li><strong>User Account Control (UAC) Prompt:</strong> Click "Yes" if Windows asks for permission.</li>
-                    <li><strong>Installation Progress:</strong> Wait a few minutes for it to install.</li>
-                    <li><strong>Complete Installation:</strong> You'll see a confirmation when it's done.</li>
-                    <li><strong>Activate Tableau Desktop:</strong> When it opens, choose to activate with a product key, start a trial, or sign in if your company uses LBLM.</li>
-                    <li><strong>Register Your Product (If prompted):</strong> Fill in your details.</li>
-                    <li><strong>Launch and Explore:</strong> Congratulations! 🎉 Tableau Desktop is ready. If you downloaded the sample data (Step 2 above), try opening it in Tableau!</li>
+                    <li><strong>Download Tableau Desktop:</strong> Click the big green button in Step 1 above to download the installer.</li>
+                    <li><strong>Install the Application:</strong> Find the downloaded file and double-click it. Follow the on-screen instructions (Accept terms, click Install, etc.).</li>
+                    <li><strong>Download a Dataset:</strong> Choose either the Day 1 or Day 2 dataset from Step 2 and download it.</li>
+                    <li><strong>(If you chose Day 2) Unzip the File:</strong> Find the downloaded `Day2_Dataset...zip` file. Right-click on it and choose "Extract All..." to create a new folder with the Excel file inside.</li>
+                    <li><strong>Launch Tableau Desktop:</strong> Open the Tableau application from your Start Menu or Desktop.</li>
+                    <li><strong>Connect to Your Data:</strong>
+                        <ul>
+                            <li>On the Tableau start screen, under "Connect," click on "Microsoft Excel."</li>
+                            <li>Navigate to and select the dataset file you downloaded (either the Day 1 Excel file or the one you extracted from the Day 2 ZIP).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Start Exploring:</strong> Congratulations! 🎉 Your data is now loaded. You can start dragging and dropping fields to create charts and dashboards.</li>
                 </ol>
             </div>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Your Organization Name. All Rights Reserved. | Need help? Contact Support.</p>
-    </footer>
-
-</body>
+    </body>
 </html>
