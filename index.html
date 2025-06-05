@@ -1,255 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download & Install Tableau Desktop 2025.1.2</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <title>Shaswata Saha - Aspiring Finance Enthusiast</title>
+    <link rel="canonical" href="https://shaswata.co.in/">
+    <meta name="keywords" content="Shaswata, Shaswata Saha, Finance, Business, Trading, Financial Markets, Technical Analysis, Market Emotions, Business Industries, Continuous Learning, Exploration, AI (Artificial Intelligence), Machine Learning, Young Entrepreneur, High School Graduate, Financial Education, Investment, Personal Finance, Entrepreneurship, Financial Literacy, Market Insights, Trading Strategies, Business Acumen, Financial Market Analysis, Market Trends Understanding, Industry Insights, AI Applications in Finance, Machine Learning in Business, Young Talent, Financial Education Advocacy, Investment Strategies, Personal Finance Management, Entrepreneurial Spirit, Financial Literacy Promotion, Market Intelligence, Effective Trading Strategies." />
+    <meta name="description" content="Shaswata Saha - Aspiring Finance Enthusiast. Explore my interests in finance, business, and technology. Connect with me via email or LinkedIn.">
+    <meta property="og:title" content="Shaswata Saha - Aspiring Finance Enthusiast">
+    <meta property="og:description" content="Explore my interests in finance, business, and technology. Connect with me via email or LinkedIn.">
+    <meta property="og:image" content="https://shaswata.co.in/Shaswata.jpg">
+    <meta property="og:url" content="https://shaswata.co.in">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shaswata Saha - Aspiring Finance Enthusiast">
+    <meta name="twitter:description" content="Explore my interests in finance, business, and technology. Connect with me via email or LinkedIn.">
+    <meta name="twitter:image" content="https://shaswata.co.in/Shaswata.jpg">
+    <meta name="twitter:url" content="https://shaswata.co.in">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
 
-        header {
-            background-color: #1c4e80;
-            color: #ffffff;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.8em;
-            font-weight: 300;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            background-color: #ffffff;
-            margin-bottom: 30px;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .section h2 {
-            color: #1c4e80;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 15px;
-            margin-top: 0;
-            font-size: 2em;
-            font-weight: 500;
-        }
-
-        .section h3 {
-            color: #2a6f97;
-            margin-top: 25px;
-            font-size: 1.5em;
-            font-weight: 500;
-        }
-
-        p, li {
-            font-size: 1.05em;
-            color: #555;
-        }
-
-        /* Download Buttons Container */
-        .download-buttons-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: stretch; /* Make items same height if content differs */
-            flex-wrap: wrap;
-            gap: 25px; /* Space between download items */
-            margin-top: 20px;
-        }
-
-        .download-item {
-            flex: 1; /* Each item takes equal space */
-            min-width: 300px; /* Minimum width before wrapping */
-            padding: 20px;
-            border: 1px solid #e7e7e7;
-            border-radius: 8px;
-            background-color: #fdfdfd;
-            display: flex;
-            flex-direction: column; /* Stack content vertically */
-            text-align: center; /* Center text and button */
-        }
-        
-        .download-item p:first-of-type { /* Target the "Step 1/2" paragraph */
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #1c4e80;
-            margin-bottom: 15px;
-        }
-
-        .download-button {
-            display: inline-block; /* Or block with margin auto for centering */
-            color: #ffffff;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.15em;
-            text-align: center;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-top: 10px; /* Space above button */
-            margin-bottom: 15px; /* Space below button */
-        }
-        .download-button:hover, .download-button:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        .download-button.primary-download {
-            background-color: #4CAF50; /* Green for main app download */
-        }
-        .download-button.primary-download:hover {
-            background-color: #45a049;
-        }
-
-        .download-button.secondary-download {
-            background-color: #007bff; /* Blue for dataset download */
-        }
-        .download-button.secondary-download:hover {
-            background-color: #0056b3;
-        }
-        
-        .file-info {
-            font-size: 0.9em;
-            color: #6c757d; /* Bootstrap's text-muted color */
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
-
-        .description-text {
-            font-size: 0.95em;
-            color: #555;
-            margin-top: 10px;
-            line-height: 1.5;
-            text-align: left; /* Align description text left for readability */
-        }
-        .description-text strong {
-            color: #333;
-        }
-
-
-        video {
-            display: block;
-            width: 100%;
-            max-width: 720px;
-            height: auto;
-            margin: 25px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            background-color: #000;
-        }
-
-        .installation-steps ol { padding-left: 25px; list-style-type: decimal; }
-        .installation-steps li { margin-bottom: 12px; line-height: 1.7; }
-        .installation-steps strong { color: #333; font-weight: 600; }
-        .installation-steps ul { padding-left: 25px; list-style-type: disc; margin-top: 8px; }
-        .installation-steps ul li { margin-bottom: 6px; }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-            background-color: #343a40;
-            color: #f8f9fa;
-            font-size: 0.95em;
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.2em; }
-            .section h2 { font-size: 1.8em; }
-            .section h3 { font-size: 1.3em; }
-            .download-button { font-size: 1.1em; padding: 12px 25px; }
-            .download-buttons-container { flex-direction: column; align-items: center; } /* Stack items on smaller screens */
-            .download-item { min-width: 90%; margin-bottom:20px; } /* Adjust width for stacked items */
-        }
-
-        @media (max-width: 480px) {
-            header { padding: 20px 15px; }
-            header h1 { font-size: 1.9em; }
-            .container { padding: 0 15px; }
-            .section { padding: 20px; }
-            .download-button { display: block; width: 90%; margin-left:auto; margin-right:auto; }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>🚀 Download & Install Tableau Desktop 2025.1.2</h1>
-    </header>
-
-    <div class="container">
-        <section class="section" id="download-section">
-            <h2>Get Your Tableau Essentials</h2>
-            <p>Ready to dive into data? Follow these steps to get Tableau Desktop and some sample data to play with!</p>
-            
-            <div class="download-buttons-container">
-                <div class="download-item">
-                    <p>Step 1: Get the App</p>
-                    <a href="https://downloads.tableau.com/tssoftwareregistered/TableauDesktop-64bit-2025-1-2.exe" download class="download-button primary-download">
-                        Download Tableau Desktop (64-bit)
-                    </a>
-                    <p class="file-info">File: TableauDesktop-64bit-2025-1-2.exe</p>
-                    <p class="description-text">This is the main software you need to create amazing charts and dashboards.</p>
-                </div>
-                
-                <div class="download-item">
-                    <p>Step 2: Get Sample Data (Optional)</p>
-                    <a href="https://www.dropbox.com/scl/fi/d3p4k6oezx2yix99tyyx5/large_scale_tableau_data.xlsx?rlkey=ewommbvq44bcnb1lj5nm98hi1&dl=1" download="large_scale_tableau_data.xlsx" class="download-button secondary-download">
-                        Download Sample Dataset (Excel file)
-                    </a>
-                    <p class="file-info">File: large_scale_tableau_data.xlsx</p>
-                    <p class="description-text">
-                        <strong>What's this?</strong> It's an Excel spreadsheet filled with sample information (data).<br><br>
-                        <strong>Why download it?</strong> You can use this data with Tableau Desktop to practice making your first charts and reports. It’s perfect if you're just starting out!
-                    </p>
-                </div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC0KDHYS6H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-RC0KDHYS6H');
+    </script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Shaswata Saha</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Shaswata Saha</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Shaswata Saha profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Shaswata Saha</h1>
+        <p class="section__text__p2">Learner | Trader | Chartered Accountant Aspirant</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/Shaswata_Resume.pdf')">
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://urls.shaswata.co.in/LinkedIn'" />
+          <img src="./assets/email.png" alt="My Email" class="icon" onclick="location.href='https://urls.shaswata.co.in/mail'" />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p>Content Editor - EICASA<br /><br />Index Trading<br /><br />For more details go to <a href="#experience">experience</a></p>
             </div>
-        </section>
-        <section class="section" id="tutorial-section">
-            <h2>Installation Tutorial 🧑‍🏫</h2>
-            <p>Follow along with our video guide for a smooth installation process, or use the step-by-step instructions below.</p>
-            
-            <video controls> 
-                <source src="https://www.dropbox.com/scl/fi/hw8blqp5n6wo3nslqdx5t/tutorial.mp4?rlkey=gpiyenpfs8gdzottr2pq1snax&raw=1" type="video/mp4">
-                Your browser does not support the video tag. Please try updating your browser or use the text instructions below.
-            </video>
-
-            <h3>Step-by-Step Installation Guide:</h3>
-            <div class="installation-steps">
-                <ol>
-                    <li><strong>Download the Installer:</strong> Click the "Download Tableau Desktop" button in Step 1 above. Save the `TableauDesktop-64bit-2025-1-2.exe` file.</li>
-                    <li><strong>Run the Installer:</strong> Find the downloaded file and double-click it.</li>
-                    <li><strong>Accept License Agreement:</strong> Read and accept the terms, then click "Install."</li>
-                    <li><strong>User Account Control (UAC) Prompt:</strong> Click "Yes" if Windows asks for permission.</li>
-                    <li><strong>Installation Progress:</strong> Wait a few minutes for it to install.</li>
-                    <li><strong>Complete Installation:</strong> You'll see a confirmation when it's done.</li>
-                    <li><strong>Activate Tableau Desktop:</strong> When it opens, choose to activate with a product key, start a trial, or sign in if your company uses LBLM.</li>
-                    <li><strong>Register Your Product (If prompted):</strong> Fill in your details.</li>
-                    <li><strong>Launch and Explore:</strong> Congratulations! 🎉 Tableau Desktop is ready. If you downloaded the sample data (Step 2 above), try opening it in Tableau!</li>
-                </ol>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>B.com - The Bhawanipur Education Society College<br /><br />CA Foundation - The Institute of Chartered Accountants of India (ICAI)<br /><br />Trading - Invest For Wealth<br /><br />HS - Howrah Vivekananda Institution</p>
             </div>
-        </section>
-    </div>
-
+          </div>
+          <div class="text-container">
+            <p style="text-align: justify;">
+              Hello, I'm Shaswata, a high school graduate and a 18-year-old student with a strong passion for finance and business. I have over 500 days of experience in trading, specializing in technical analysis, understanding market emotions, and financial concepts. Currently, I am preparing for the CA foundation exams while exploring trading alongside my studies. I'm also pursuing my B.Com from BESC Kolkata, West Bengal's top Times B-School, with an expected graduation in 2028. In addition, I'm a proud member of EICASA, actively participating in CA-related events and seminars.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Trading</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Derivatives Trader</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Artificial Intelligence Specialist</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Investor</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <p style="text-align: justify;">
+          With a fervent passion for the dynamic realms of finance and business, I have nurtured my interest from a young age, driven by an unrelenting desire to master the complexities of the financial world. <br>
+          Eager to delve deeper into new concepts and seize opportunities in the market, I am dedicated to continuous learning, self-improvement, and innovation.<br><br>
+          Currently pursuing the B.Com degree at BESC Kolkata, West Bengal's premier Times B-School, I am also rigorously preparing for the CA Foundation examination. <br>
+          This dual pursuit is a testament to my relentless ambition to build a rock-solid foundation for a career at the forefront of finance.<br><br>
+          With more than two years of hands-on trading experience, I have honed my expertise in technical analysis, mastered the ability to read market emotions, and cultivated a comprehensive understanding of financial concepts. <br>
+          My experience in the markets has been a transformative journey—one that has sharpened my decision-making and equipped me with insights that I am eager to apply and share with others. <br><br>
+          Beyond trading, my fascination with AI and machine learning is growing, especially in their potential to revolutionize decision-making in finance and business. <br>
+          Although my proficiency is still developing, I am determined to leverage these technologies to gain a competitive edge in the financial sector.<br><br>
+          As a member of EICASA, I actively contribute to and engage in impactful events and seminars related to CA.<br>
+          My commitment to excellence is further reflected in my work as a content editor for the EIRC Presents 49th Regional Conference, where I contribute to the high standards of the event. <br>
+          I am always ready to explore new frontiers, lead with purpose, and make a meaningful impact.
+        </p>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="https://urls.shaswata.co.in/Shaswata's-Mail">contact@shaswata.co.in</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://urls.shaswata.co.in/Shaswata's-LinkedIn-Account">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/X.png" alt="X icon" class="icon contact-icon" />
+          <p><a href="https://urls.shaswata.co.in/Shaswata's-Twitter-Account">X (formerly Twitter)</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/youtube.png" alt="YouTube icon" class="icon contact-icon" />
+          <p><a href="https://urls.shaswata.co.in/Shaswata's-YouTube-Account">YouTube</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/instagram.png" alt="Instagram icon" class="icon contact-icon" />
+          <p><a href="https://urls.shaswata.co.in/Shaswata's-Instagram-Account">Instagram</a></p>
+        </div>
+      </div>
+    </section>
     <footer>
-        <p>&copy; 2025 Your Organization Name. All Rights Reserved. | Need help? Contact Support.</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>To experience the previous layout of this site, visit the old version of Shaswata's website <a href="https://shaswata.co.in/old/" title="Explore the old version of Shaswata's website">here</a>.</p>
+      <p>Copyright &#169; 2025 Shaswata Saha. All Rights Reserved.</p>
     </footer>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
