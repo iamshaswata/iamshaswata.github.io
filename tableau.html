@@ -9,13 +9,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6; /* Light grayish-blue background */
+            background-color: #f4f7f6;
             color: #333;
             line-height: 1.6;
         }
 
         header {
-            background-color: #1c4e80; /* Tableau's dark blue */
+            background-color: #1c4e80;
             color: #ffffff;
             padding: 30px 20px;
             text-align: center;
@@ -43,7 +43,7 @@
         }
 
         .section h2 {
-            color: #1c4e80; /* Tableau's dark blue */
+            color: #1c4e80;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 15px;
             margin-top: 0;
@@ -52,7 +52,7 @@
         }
 
         .section h3 {
-            color: #2a6f97; /* A slightly lighter blue for subheadings */
+            color: #2a6f97;
             margin-top: 25px;
             font-size: 1.5em;
             font-weight: 500;
@@ -63,107 +63,128 @@
             color: #555;
         }
 
+        /* Download Buttons Container */
+        .download-buttons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch; /* Make items same height if content differs */
+            flex-wrap: wrap;
+            gap: 25px; /* Space between download items */
+            margin-top: 20px;
+        }
+
+        .download-item {
+            flex: 1; /* Each item takes equal space */
+            min-width: 300px; /* Minimum width before wrapping */
+            padding: 20px;
+            border: 1px solid #e7e7e7;
+            border-radius: 8px;
+            background-color: #fdfdfd;
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            text-align: center; /* Center text and button */
+        }
+        
+        .download-item p:first-of-type { /* Target the "Step 1/2" paragraph */
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #1c4e80;
+            margin-bottom: 15px;
+        }
+
         .download-button {
-            display: inline-block;
-            background-color: #4CAF50; /* A clear green for download */
+            display: inline-block; /* Or block with margin auto for centering */
             color: #ffffff;
-            padding: 15px 35px;
+            padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            font-size: 1.25em;
+            font-size: 1.15em;
             text-align: center;
             transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 10px; /* Space above button */
+            margin-bottom: 15px; /* Space below button */
+        }
+        .download-button:hover, .download-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        .download-button:hover, .download-button:focus {
-            background-color: #45a049; /* Darker green on hover/focus */
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        .download-button.primary-download {
+            background-color: #4CAF50; /* Green for main app download */
         }
+        .download-button.primary-download:hover {
+            background-color: #45a049;
+        }
+
+        .download-button.secondary-download {
+            background-color: #007bff; /* Blue for dataset download */
+        }
+        .download-button.secondary-download:hover {
+            background-color: #0056b3;
+        }
+        
+        .file-info {
+            font-size: 0.9em;
+            color: #6c757d; /* Bootstrap's text-muted color */
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .description-text {
+            font-size: 0.95em;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.5;
+            text-align: left; /* Align description text left for readability */
+        }
+        .description-text strong {
+            color: #333;
+        }
+
 
         video {
             display: block;
             width: 100%;
-            max-width: 720px; /* Max width for the video player */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 720px;
+            height: auto;
             margin: 25px auto;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            background-color: #000; /* Fallback background for video area */
+            background-color: #000;
         }
 
-        .installation-steps ol {
-            padding-left: 25px;
-            list-style-type: decimal;
-        }
-
-        .installation-steps li {
-            margin-bottom: 12px;
-            line-height: 1.7;
-        }
-
-        .installation-steps strong {
-            color: #333;
-            font-weight: 600;
-        }
-
-        .installation-steps ul {
-            padding-left: 25px;
-            list-style-type: disc;
-            margin-top: 8px;
-        }
-
-        .installation-steps ul li {
-            margin-bottom: 6px;
-        }
+        .installation-steps ol { padding-left: 25px; list-style-type: decimal; }
+        .installation-steps li { margin-bottom: 12px; line-height: 1.7; }
+        .installation-steps strong { color: #333; font-weight: 600; }
+        .installation-steps ul { padding-left: 25px; list-style-type: disc; margin-top: 8px; }
+        .installation-steps ul li { margin-bottom: 6px; }
 
         footer {
             text-align: center;
             padding: 25px;
             margin-top: 40px;
-            background-color: #343a40; /* Dark footer */
+            background-color: #343a40;
             color: #f8f9fa;
             font-size: 0.95em;
         }
 
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2em;
-            }
-            .section h2 {
-                font-size: 1.8em;
-            }
-            .section h3 {
-                font-size: 1.3em;
-            }
-            .download-button {
-                font-size: 1.1em;
-                padding: 12px 30px;
-            }
+            header h1 { font-size: 2.2em; }
+            .section h2 { font-size: 1.8em; }
+            .section h3 { font-size: 1.3em; }
+            .download-button { font-size: 1.1em; padding: 12px 25px; }
+            .download-buttons-container { flex-direction: column; align-items: center; } /* Stack items on smaller screens */
+            .download-item { min-width: 90%; margin-bottom:20px; } /* Adjust width for stacked items */
         }
 
         @media (max-width: 480px) {
-            header {
-                padding: 20px 15px;
-            }
-            header h1 {
-                font-size: 1.9em;
-            }
-            .container {
-                padding: 0 15px;
-            }
-            .section {
-                padding: 20px;
-            }
-            .download-button {
-                display: block; /* Make button full width */
-                width: 100%;
-                box-sizing: border-box; /* Include padding in width */
-            }
+            header { padding: 20px 15px; }
+            header h1 { font-size: 1.9em; }
+            .container { padding: 0 15px; }
+            .section { padding: 20px; }
+            .download-button { display: block; width: 90%; margin-left:auto; margin-right:auto; }
         }
     </style>
 </head>
@@ -174,14 +195,32 @@
 
     <div class="container">
         <section class="section" id="download-section">
-            <h2>Get Your Installer</h2>
-            <p>You're one click away from unlocking powerful data visualizations! Download Tableau Desktop 2025.1.2 (64-bit) by clicking the button below.</p>
-            <a href="https://downloads.tableau.com/tssoftwareregistered/TableauDesktop-64bit-2025-1-2.exe" download class="download-button">
-                Download Tableau Desktop 2025.1.2 (64-bit)
-            </a>
-            <p style="margin-top:15px; font-size:0.9em;">File: TableauDesktop-64bit-2025-1-2.exe</p>
+            <h2>Get Your Tableau Essentials</h2>
+            <p>Ready to dive into data? Follow these steps to get Tableau Desktop and some sample data to play with!</p>
+            
+            <div class="download-buttons-container">
+                <div class="download-item">
+                    <p>Step 1: Get the App</p>
+                    <a href="https://downloads.tableau.com/tssoftwareregistered/TableauDesktop-64bit-2025-1-2.exe" download class="download-button primary-download">
+                        Download Tableau Desktop (64-bit)
+                    </a>
+                    <p class="file-info">File: TableauDesktop-64bit-2025-1-2.exe</p>
+                    <p class="description-text">This is the main software you need to create amazing charts and dashboards.</p>
+                </div>
+                
+                <div class="download-item">
+                    <p>Step 2: Get Sample Data (Optional)</p>
+                    <a href="https://www.dropbox.com/scl/fi/d3p4k6oezx2yix99tyyx5/large_scale_tableau_data.xlsx?rlkey=ewommbvq44bcnb1lj5nm98hi1&dl=1" download="large_scale_tableau_data.xlsx" class="download-button secondary-download">
+                        Download Sample Dataset (Excel file)
+                    </a>
+                    <p class="file-info">File: large_scale_tableau_data.xlsx</p>
+                    <p class="description-text">
+                        <strong>What's this?</strong> It's an Excel spreadsheet filled with sample information (data).<br><br>
+                        <strong>Why download it?</strong> You can use this data with Tableau Desktop to practice making your first charts and reports. It’s perfect if you're just starting out!
+                    </p>
+                </div>
+            </div>
         </section>
-
         <section class="section" id="tutorial-section">
             <h2>Installation Tutorial 🧑‍🏫</h2>
             <p>Follow along with our video guide for a smooth installation process, or use the step-by-step instructions below.</p>
@@ -190,30 +229,19 @@
                 <source src="https://www.dropbox.com/scl/fi/hw8blqp5n6wo3nslqdx5t/tutorial.mp4?rlkey=gpiyenpfs8gdzottr2pq1snax&raw=1" type="video/mp4">
                 Your browser does not support the video tag. Please try updating your browser or use the text instructions below.
             </video>
+
             <h3>Step-by-Step Installation Guide:</h3>
             <div class="installation-steps">
                 <ol>
-                    <li><strong>Download the Installer:</strong> Click the "Download Tableau Desktop" button above. Save the `TableauDesktop-64bit-2025-1-2.exe` file to a known location on your computer (e.g., your Downloads folder).</li>
-                    <li><strong>Run the Installer:</strong>
-                        <ul>
-                            <li>Navigate to the folder where you saved the installer.</li>
-                            <li>Double-click the `.exe` file to launch the installation wizard.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Accept License Agreement:</strong> Carefully read the Tableau Software License Agreement. If you agree to the terms, check the box "I have read and accept the terms of the license agreement." Click "Install."</li>
-                    <li><strong>User Account Control (UAC) Prompt:</strong> Windows may ask for permission to allow the installer to make changes to your device. Click "Yes" to proceed.</li>
-                    <li><strong>Installation Progress:</strong> The installer will now copy files and configure Tableau Desktop on your system. This process might take a few minutes. Please be patient.</li>
-                    <li><strong>Complete Installation:</strong> Once the installation is finished, you'll see a confirmation message.</li>
-                    <li><strong>Activate Tableau Desktop:</strong>
-                        <ul>
-                            <li>Upon first launch, Tableau Desktop will prompt you to activate.</li>
-                            <li><strong>With a Product Key:</strong> If you have purchased a license, select "Activate with a product key" and enter your key.</li>
-                            <li><strong>Start a Trial:</strong> If you want to try Tableau Desktop, select "Start a trial now." A trial typically lasts for 14 days.</li>
-                            <li><strong>Login-based License Management:</strong> If your organization uses Tableau Cloud or Tableau Server with Login-based License Management (LBLM), you can activate by signing in to your site.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Register Your Product (If prompted):</strong> Fill out the registration form with your details. This step might be optional or required depending on your activation method.</li>
-                    <li><strong>Launch and Explore:</strong> Congratulations! 🎉 Tableau Desktop is now installed. It should open automatically, or you can launch it from your Start Menu or desktop shortcut. You're ready to connect to data and start creating insightful visualizations!</li>
+                    <li><strong>Download the Installer:</strong> Click the "Download Tableau Desktop" button in Step 1 above. Save the `TableauDesktop-64bit-2025-1-2.exe` file.</li>
+                    <li><strong>Run the Installer:</strong> Find the downloaded file and double-click it.</li>
+                    <li><strong>Accept License Agreement:</strong> Read and accept the terms, then click "Install."</li>
+                    <li><strong>User Account Control (UAC) Prompt:</strong> Click "Yes" if Windows asks for permission.</li>
+                    <li><strong>Installation Progress:</strong> Wait a few minutes for it to install.</li>
+                    <li><strong>Complete Installation:</strong> You'll see a confirmation when it's done.</li>
+                    <li><strong>Activate Tableau Desktop:</strong> When it opens, choose to activate with a product key, start a trial, or sign in if your company uses LBLM.</li>
+                    <li><strong>Register Your Product (If prompted):</strong> Fill in your details.</li>
+                    <li><strong>Launch and Explore:</strong> Congratulations! 🎉 Tableau Desktop is ready. If you downloaded the sample data (Step 2 above), try opening it in Tableau!</li>
                 </ol>
             </div>
         </section>
