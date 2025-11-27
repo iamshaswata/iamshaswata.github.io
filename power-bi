@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Microsoft Power BI Desktop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Power BI Gradients */
+        .bg-pbi-dark {
+            background-color: #252423;
+        }
+        .text-pbi-yellow {
+            color: #F2C811;
+        }
+        .bg-pbi-yellow {
+            background-color: #F2C811;
+        }
+        .hover-bg-pbi-yellow:hover {
+            background-color: #e0b80f;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(#F2C811 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.05;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark-glass {
+            background: rgba(30, 30, 30, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-3">
+                    <!-- Power BI Logo SVG -->
+                    <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="12" width="6" height="14" rx="1" fill="#F2C811"/>
+                        <rect x="13" y="4" width="6" height="22" rx="1" fill="#F2C811"/>
+                        <rect x="22" y="18" width="6" height="8" rx="1" fill="#F2C811"/>
+                    </svg>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Power BI <span class="font-normal text-gray-500">Desktop</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+                    <a href="#features" class="hover:text-gray-900 transition">Features</a>
+                    <a href="#download" class="hover:text-gray-900 transition">Download</a>
+                    <a href="#requirements" class="hover:text-gray-900 transition">Requirements</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-pbi-dark text-white overflow-hidden">
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-pbi-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-yellow-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-pbi-yellow text-xs font-medium mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-pbi-yellow mr-2 animate-pulse"></span>
+                    Latest Version Available
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Visualize your data.<br>
+                    <span class="text-pbi-yellow">Empower your decisions.</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed">
+                    Connect to hundreds of data sources, simplify data prep, and drive ad hoc analysis. Produce beautiful reports, then publish them for your organization to consume on the web and across mobile devices.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#download" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-black bg-pbi-yellow hover-bg-pbi-yellow transition-all duration-200 shadow-[0_0_20px_rgba(242,200,17,0.3)] hover:shadow-[0_0_30px_rgba(242,200,17,0.5)]">
+                        <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                        Download Now
+                    </a>
+                    <a href="https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-what-is-desktop" target="_blank" class="inline-flex items-center justify-center px-8 py-4 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-white/10 transition-all duration-200 backdrop-blur-sm">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Options Section -->
+    <div id="download" class="py-24 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Choose your download method</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Select the installation method that best suits your needs. The Microsoft Store version is recommended for automatic updates.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Option 1: Microsoft Store -->
+                <div class="glass-card rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden group border-t-4 border-pbi-yellow">
+                    <div class="absolute top-0 right-0 bg-pbi-yellow text-xs font-bold px-3 py-1 rounded-bl-lg text-black z-10">RECOMMENDED</div>
+                    
+                    <div class="flex items-start justify-between mb-8">
+                        <div class="p-3 bg-gray-100 rounded-xl group-hover:bg-yellow-50 transition-colors">
+                            <i data-lucide="store" class="w-10 h-10 text-gray-700 group-hover:text-yellow-600"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Microsoft Store</h3>
+                    <p class="text-gray-500 mb-8 h-12">Install directly from the Windows Store. Includes automatic background updates so you're always on the latest version.</p>
+
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600">
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Automatic Updates</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Smaller download size (incremental)</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> No admin rights usually required</li>
+                    </ul>
+
+                    <a href="https://apps.microsoft.com/detail/9NTXR16HNW1T?hl=en-us&gl=IN&ocid=pdpshare" target="_blank" class="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors group-hover:ring-2 group-hover:ring-offset-2 group-hover:ring-gray-900">
+                        <i data-lucide="shopping-bag" class="w-5 h-5 mr-2"></i>
+                        Get from Store
+                    </a>
+                </div>
+
+                <!-- Option 2: Direct EXE -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 relative overflow-hidden group">
+                    
+                    <div class="flex items-start justify-between mb-8">
+                        <div class="p-3 bg-gray-100 rounded-xl">
+                            <i data-lucide="hard-drive-download" class="w-10 h-10 text-gray-700"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Direct Installer (.exe)</h3>
+                    <p class="text-gray-500 mb-8 h-12">Download the standalone setup file. Best for offline installations or specific version requirements.</p>
+
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600">
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-gray-400 mr-2"></i> Manual Installation</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-gray-400 mr-2"></i> Full x64 Setup File</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-gray-400 mr-2"></i> Good for enterprise deployment</li>
+                    </ul>
+
+                    <a href="https://download.microsoft.com/download/8/8/0/880bca75-79dd-466a-927d-1abf1f5454b0/PBIDesktopSetup_x64.exe" class="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl bg-white border-2 border-gray-200 text-gray-700 font-semibold hover:border-gray-900 hover:text-gray-900 transition-all">
+                        <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                        Download Installer (x64)
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-sm text-gray-400">
+                    By downloading, you agree to the <a href="#" class="underline hover:text-gray-600">Microsoft Terms of Service</a> and <a href="#" class="underline hover:text-gray-600">Privacy Statement</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Highlights -->
+    <div id="features" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Why Power BI Desktop?</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="database" class="w-8 h-8 text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Connect to Data</h3>
+                    <p class="text-gray-500 leading-relaxed">Access data from hundreds of supported on-premises and cloud-based sources, such as Dynamics 365, Salesforce, Azure SQL DB, Excel, and SharePoint.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="bar-chart-2" class="w-8 h-8 text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Prep and Model</h3>
+                    <p class="text-gray-500 leading-relaxed">Data preparation can take most of your time. Save time with data modeling tools. Reclaim hours in your day using the self-service Power Query experience.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="pie-chart" class="w-8 h-8 text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Advanced Analytics</h3>
+                    <p class="text-gray-500 leading-relaxed">Dig deeper into data and find patterns you may have otherwise missed that lead to actionable insights using quick measures, grouping, and forecasting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Requirements -->
+    <div id="requirements" class="bg-gray-50 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                    <i data-lucide="monitor" class="w-5 h-5 mr-2 text-gray-400"></i>
+                    System Requirements
+                </h3>
+                <div class="grid sm:grid-cols-2 gap-y-4 gap-x-12 text-sm">
+                    <div>
+                        <span class="block text-gray-400 font-medium mb-1">Supported Operating Systems</span>
+                        <p class="text-gray-700">Windows 10, Windows 11, Windows Server 2012 R2, 2016, 2019, 2022</p>
+                    </div>
+                    <div>
+                        <span class="block text-gray-400 font-medium mb-1">RAM</span>
+                        <p class="text-gray-700">2 GB available (4 GB or more recommended)</p>
+                    </div>
+                    <div>
+                        <span class="block text-gray-400 font-medium mb-1">Display</span>
+                        <p class="text-gray-700">At least 1440x900 or 1600x900 (16:9) required</p>
+                    </div>
+                    <div>
+                        <span class="block text-gray-400 font-medium mb-1">Processor</span>
+                        <p class="text-gray-700">1 gigahertz (GHz) or faster x86- or x64-bit processor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-pbi-dark text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-white font-bold text-lg">Power BI</span>
+                <p class="text-sm mt-1">Part of the Microsoft Power Platform</p>
+            </div>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="hover:text-white transition">Privacy</a>
+                <a href="#" class="hover:text-white transition">Terms</a>
+                <a href="#" class="hover:text-white transition">Trademarks</a>
+                <span>© Microsoft 2025</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            addEventListener('click', function (e) {
+                if(this.getAttribute('href').startsWith('#')){
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
