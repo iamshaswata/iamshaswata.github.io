@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interest on Borrowed Capital - Section 24(b) | Shaswata Saha</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- MERGED CSS FROM PROVIDED DESIGN --- */
+        
+        /* GENERAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: rgb(85, 85, 85);
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        p {
+            color: rgb(85, 85, 85);
+            margin-bottom: 1rem;
+        }
+
+        a, .btn {
+            transition: all 300ms ease;
+        }
+
+        /* NAVIGATION */
+        nav, .nav-links {
+            display: flex;
+        }
+
+        nav {
+            justify-content: space-around;
+            align-items: center;
+            height: 17vh;
+        }
+
+        .nav-links {
+            gap: 2rem;
+            list-style: none;
+            font-size: 1.5rem;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: grey;
+            text-decoration: underline;
+            text-underline-offset: 1rem;
+            text-decoration-color: rgb(181, 181, 181);
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: black;
+        }
+        
+        .logo:hover {
+            cursor: default;
+        }
+
+        /* HAMBURGER MENU */
+        #hamburger-nav {
+            display: none;
+        }
+
+        .hamburger-menu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hamburger-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .hamburger-icon span {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu-links {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            width: fit-content;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid rgb(163, 163, 163);
+            border-radius: 1rem;
+            z-index: 100;
+        }
+
+        .menu-links a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: black;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu-links li {
+            list-style: none;
+        }
+
+        .menu-links.open {
+            max-height: 300px;
+        }
+
+        .hamburger-icon.open span:first-child {
+            transform: rotate(45deg) translate(10px, 5px);
+        }
+
+        .hamburger-icon.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-icon.open span:last-child {
+            transform: rotate(-45deg) translate(10px, -5px);
+        }
+
+        /* BLOG CONTAINER SPECIFIC STYLES */
+        .blog-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 80vh;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgb(163, 163, 163);
+            padding-bottom: 2rem;
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: black;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-meta {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* CONTENT TYPOGRAPHY & ELEMENTS */
+        .blog-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: black;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* SCROLLABLE ELEMENTS (Mind Maps & Tables) */
+        .scroll-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 1rem;
+            border: 1px solid rgb(220, 220, 220);
+            background: rgb(250, 250, 250);
+            padding: 1rem;
+            /* Scrollbar styling for aesthetics */
+            scrollbar-width: thin;
+            scrollbar-color: rgb(163, 163, 163) rgb(250, 250, 250);
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: rgb(163, 163, 163);
+            border-radius: 4px;
+        }
+
+        /* PRE/CODE BLOCKS (Mind Map specific) */
+        pre {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            white-space: pre;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        /* CODE BOXES */
+        .code-box {
+            background: #f4f4f4;
+            border-left: 4px solid #333;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        /* TABLES */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px; /* Forces scroll on small screens */
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: rgb(240, 240, 240);
+            font-weight: 600;
+            color: black;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* INTERACTIVE CHECKLIST */
+        .checklist-container {
+            background: white;
+            border: 1px solid rgb(163, 163, 163);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            min-width: 20px;
+            height: 20px;
+            border: 2px solid #555;
+            border-radius: 4px;
+            margin-right: 12px;
+            margin-top: 4px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checklist-item input[type="checkbox"]:checked {
+            background-color: #333;
+            border-color: #333;
+        }
+
+        .checklist-item input[type="checkbox"]:checked::after {
+            content: '✓';
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s;
+        }
+
+        /* The logic for strikethrough */
+        .checklist-item input:checked + label {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        /* BUTTONS */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            font-weight: 600;
+            transition: all 300ms ease;
+            padding: 1rem;
+            width: 8rem;
+            border-radius: 2rem;
+            background: none;
+            border: rgb(53, 53, 53) 0.1rem solid;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            background: rgb(53, 53, 53);
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            height: 26vh;
+            margin: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        /* MEDIA QUERIES */
+        @media screen and (max-width: 1200px) {
+            #desktop-nav { display: none; }
+            #hamburger-nav { display: flex; }
+            
+            .blog-title { font-size: 2rem; }
+            .blog-wrapper { padding: 1rem; }
+        }
+
+        @media screen and (max-width: 600px) {
+            .blog-title { font-size: 1.75rem; }
+            footer { height: 40vh; }
+            .nav-links { flex-direction: column; gap: 0.5rem; text-align: center; }
+            
+            /* Ensure tables scroll smoothly on mobile */
+            .scroll-container {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+        <div class="logo">Shaswata Saha</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav id="hamburger-nav">
+        <div class="logo">Shaswata Saha</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Content Section -->
+    <div class="blog-wrapper">
+        <header class="blog-header">
+            <h1 class="blog-title">Interest on Borrowed Capital - Section 24(b) - Self-Occupied Property</h1>
+            <p class="blog-meta">Complete Guide &bull; Tax Laws</p>
+        </header>
+
+        <article class="blog-content">
+            <p><strong>Detailed analysis of provisions, limits, and calculations for Interest on Borrowed Capital for Self-Occupied Properties under Section 24(b).</strong></p>
+            
+            <hr style="border: 0; border-top: 1px solid #ddd; margin: 2rem 0;">
+
+            <h2>📋 Mind Map - Interest Deduction (Self-occupied)</h2>
+            <p><em>Scroll right to view the full chart on smaller devices.</em></p>
+            <div class="scroll-container">
+<pre>
+INTEREST ON BORROWED CAPITAL - SELF-OCCUPIED [SEC 24(b)]
+│
+├── PURPOSE OF LOAN
+│   ├── Purchase/Acquisition
+│   ├── Construction
+│   ├── Repair/Renewal/Reconstruction
+│   └── Re-finance of existing loan
+│
+├── TIME LIMITS & DATE ANALYSIS
+│   ├── Loan taken BEFORE 01.04.1999
+│   ├── Loan taken ON/AFTER 01.04.1999
+│   └── 5-year completion rule
+│
+├── PERIOD CLASSIFICATION
+│   ├── Pre-construction Period Interest
+│   │   ├── Definition
+│   │   ├── Calculation
+│   │   └── 1/5th treatment
+│   └── Current Year Interest
+│
+├── DEDUCTION LIMITS
+│   ├── Self-acquired/constructed: ₹2,00,000
+│   ├── Repair/Renewal/Reconstruction: ₹30,000
+│   ├── Before 01.04.1999: ₹30,000
+│   └── 5-year rule not met: ₹30,000
+│
+└── SPECIAL SCENARIOS
+    ├── Multiple loans
+    ├── Change in use (Let-out to Self-occupied)
+    ├── Joint ownership
+    └── Loss of self-occupied status
+</pre>
+            </div>
+
+            <h2>🎯 Complete Section 24(b) Provisions - Self-occupied</h2>
+            
+            <h3>Basic Rule</h3>
+            <p>Interest on capital borrowed for:</p>
+            <ul>
+                <li>Purchase</li>
+                <li>Construction</li>
+                <li>Repair</li>
+                <li>Renewal</li>
+                <li>Reconstruction</li>
+            </ul>
+            <p><strong>of the property.</strong></p>
+
+            <h2>📅 DATE-WISE ANALYSIS & LIMITS</h2>
+            <div class="scroll-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Loan Details</th>
+                            <th>Maximum Deduction</th>
+                            <th>Conditions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Loan for PURCHASE/CONSTRUCTION</strong> taken <strong>ON or AFTER 01.04.1999</strong></td>
+                            <td><strong>₹2,00,000</strong></td>
+                            <td>• Acquisition/construction completed within 5 years from END of FY of borrowing<br>• Property must be self-occupied</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Loan for PURCHASE/CONSTRUCTION</strong> taken <strong>BEFORE 01.04.1999</strong></td>
+                            <td><strong>₹30,000</strong></td>
+                            <td>Regardless of completion date</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Loan for REPAIR/RENEWAL/RECONSTRUCTION</strong> (any date)</td>
+                            <td><strong>₹30,000</strong></td>
+                            <td>Not eligible for ₹2,00,000 limit</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Purchase/Construction</strong> but <strong>NOT completed within 5 years</strong></td>
+                            <td><strong>₹30,000</strong></td>
+                            <td>5-year rule violated</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Re-financed loan</strong> (fresh loan to repay old loan)</td>
+                            <td>Same as original</td>
+                            <td>Treated as continuation of original loan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>🏗️ PURPOSE-WISE DETAILED ANALYSIS</h2>
+
+            <h3>1️⃣ PURCHASE/ACQUISITION OF PROPERTY</h3>
+            <p><strong>Eligible for ₹2,00,000 Limit:</strong></p>
+            <ul>
+                <li>✅ Loan taken <strong>on or after 01.04.1999</strong></li>
+                <li>✅ Purchase completed <strong>within 5 years</strong> from end of FY of borrowing</li>
+                <li>✅ Property is <strong>self-occupied</strong></li>
+            </ul>
+            
+            <div class="code-box">
+Loan taken: 15.08.2020
+5-year deadline: 31.03.2026 (end of FY 2025-26)
+Purchase must be completed by: 31.03.2026
+If purchased on 15.04.2026 → ₹30,000 limit applies (5-year rule violated)
+            </div>
+
+            <p><strong>Eligible for ₹30,000 Limit Only:</strong></p>
+            <ul>
+                <li>❌ Loan taken <strong>before 01.04.1999</strong></li>
+                <li>❌ Purchase not completed within 5 years</li>
+                <li>❌ Second-hand property acquired (typically, but check completion)</li>
+            </ul>
+
+            <h3>2️⃣ CONSTRUCTION OF PROPERTY</h3>
+            <p><strong>Eligible for ₹2,00,000 Limit:</strong></p>
+            <ul>
+                <li>✅ Loan taken <strong>on or after 01.04.1999</strong></li>
+                <li>✅ Construction completed <strong>within 5 years</strong> from end of FY of borrowing</li>
+                <li>✅ Property is <strong>self-occupied</strong></li>
+            </ul>
+            
+            <p><strong>Critical Date Calculation:</strong></p>
+            <div class="code-box">
+Loan sanctioned: 10.05.2019 (FY 2019-20)
+5-year period ends: 31.03.2025 (end of FY 2024-25)
+Construction completion required by: 31.03.2025
+
+Construction completed on: 20.02.2025 ✅ → ₹2,00,000 limit
+Construction completed on: 15.04.2025 ❌ → ₹30,000 limit
+            </div>
+
+            <h3>3️⃣ REPAIR/RENEWAL/RECONSTRUCTION</h3>
+            <p><strong>Always ₹30,000 Limit</strong> (regardless of date of loan)</p>
+            <p><strong>Important Points:</strong></p>
+            <ul>
+                <li>❌ NOT eligible for ₹2,00,000 limit</li>
+                <li>❌ Even if loan taken after 01.04.1999</li>
+                <li>✅ Only ₹30,000 deduction allowed</li>
+            </ul>
+
+            <h2>⏰ PRE-CONSTRUCTION PERIOD INTEREST</h2>
+            <div class="scroll-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Total Pre-construction Interest</strong></td>
+                            <td>Calculated from loan date to 31st March of completion year</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deduction Method</strong></td>
+                            <td>1/5th of total pre-construction interest is allowed each year</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Period</strong></td>
+                            <td>5 equal installments starting from year of completion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Applicability</strong></td>
+                            <td>Both Let-out AND Self-occupied properties</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Step-by-step Calculation Example</h3>
+            <div class="code-box">
+Loan taken: 01.04.2020 (for construction)
+Construction completed: 30.11.2023
+Property self-occupied from: 01.12.2023
+            </div>
+
+            <p><strong>Step 1: Identify Pre-construction Period</strong></p>
+            <p>Pre-construction period: 01.04.2020 to 31.03.2024<br>(Note: Till 31st March of completion year, not actual completion date)</p>
+
+            <p><strong>Step 2: Calculate Total Pre-construction Interest</strong></p>
+            <div class="code-box">
+FY 2020-21: Interest ₹1,00,000
+FY 2021-22: Interest ₹1,20,000
+FY 2022-23: Interest ₹1,40,000
+FY 2023-24: Interest ₹1,60,000 (01.04.2023 to 31.03.2024)
+────────────────────────────────
+Total Pre-construction Interest: ₹5,20,000
+1/5th of ₹5,20,000 = ₹1,04,000 per year
+            </div>
+
+            <p><strong>Step 3: Year-wise Deduction</strong></p>
+            <div class="scroll-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>FY</th>
+                            <th>Current Interest</th>
+                            <th>Pre-const (1/5th)</th>
+                            <th>Total</th>
+                            <th>Deduction Allowed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023-24</td>
+                            <td>₹40,000</td>
+                            <td>₹1,04,000</td>
+                            <td>₹1,44,000</td>
+                            <td>₹1,44,000</td>
+                        </tr>
+                        <tr>
+                            <td>2024-25</td>
+                            <td>₹1,60,000</td>
+                            <td>₹1,04,000</td>
+                            <td>₹2,64,000</td>
+                            <td><strong>₹2,00,000</strong> ⚠️</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>📌 Quick Revision Checklist</h2>
+            <p><strong>Before Solving Any Problem:</strong> (Click to check)</p>
+            
+            <div class="checklist-container">
+                <div class="checklist-item">
+                    <input type="checkbox" id="c1">
+                    <label for="c1">Identify purpose: Purchase/Construction/Repair?</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="c2">
+                    <label for="c2">Check loan date: Before or After 01.04.1999?</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="c3">
+                    <label for="c3">Verify 5-year completion (if applicable)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="c4">
+                    <label for="c4">Calculate pre-construction period correctly</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="c5">
+                    <label for="c5">Determine applicable limit (₹2L or ₹30K)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="c6">
+                    <label for="c6">Add current + pre-construction interest</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="c7">
+                    <label for="c7">Check if property is self-occupied throughout the year</label>
+                </div>
+            </div>
+
+            <h2>💡 Pro Tips for Exams</h2>
+            <ol>
+                <li><strong>Always write the limit applied</strong> - Examiner looks for this.</li>
+                <li><strong>Show pre-construction calculation separately</strong> - Even if NIL.</li>
+                <li><strong>Mention the date tests</strong> - Before/After 01.04.1999, 5-year rule.</li>
+                <li><strong>For ₹30,000 limit, specify WHY</strong> - Repair? Before 1999? Beyond 5 years?</li>
+                <li><strong>Remember:</strong> Interest is DEDUCTION, not income - Careful with signs.</li>
+                <li><strong>Loss of self-occupied</strong> - Always cap at ₹2,00,000 (Sec 23(3)).</li>
+            </ol>
+            
+            <hr style="border: 0; border-top: 1px solid #ddd; margin: 2rem 0;">
+
+            <p style="text-align: center; font-weight: 600; font-size: 1.2rem;">
+                🎯 Final Formula:<br>
+                DEDUCTION u/s 24(b) = MIN [ (Current Interest + Pre-const 1/5th), Limit (₹2L or ₹30K) ]
+            </p>
+
+            <div class="btn-container">
+                <button class="btn" onclick="window.scrollTo(0,0)">
+                    Top
+                </button>
+                <button class="btn" onclick="location.href='index.html'">
+                    Home
+                </button>
+            </div>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2026 Shaswata Saha. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            menu.classList.toggle("open");
+            icon.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
