@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Access Practical Exam Cheat Sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────
+   LIGHT THEME (DEFAULT)
+───────────────────────────────────────── */
+:root, [data-theme="light"] {
+  --bg:        #f0f2f8;
+  --surface:   #ffffff;
+  --surface2:  #e8ebf5;
+  --surface3:  #f7f8fd;
+  --border:    #d4d8ee;
+  --text:      #1c1f33;
+  --muted:     #5a6180;
+  --shadow:    0 2px 8px rgba(60,70,130,0.08), 0 0 0 1px rgba(60,70,130,0.05);
+  --shadow-sm: 0 1px 3px rgba(60,70,130,0.08);
+
+  /* accent palette */
+  --c-blue:   #1a56c4;   --c-blue-bg:   rgba(26,86,196,0.08);    --c-blue-hl:  rgba(26,86,196,0.06);
+  --c-teal:   #0c7a6b;   --c-teal-bg:   rgba(12,122,107,0.08);   --c-teal-hl:  rgba(12,122,107,0.06);
+  --c-green:  #166534;   --c-green-bg:  rgba(22,101,52,0.08);    --c-green-hl: rgba(22,101,52,0.06);
+  --c-amber:  #a05c00;   --c-amber-bg:  rgba(160,92,0,0.08);     --c-amber-hl: rgba(160,92,0,0.06);
+  --c-red:    #b91c1c;   --c-red-bg:    rgba(185,28,28,0.08);    --c-red-hl:   rgba(185,28,28,0.06);
+  --c-pink:   #be185d;   --c-pink-bg:   rgba(190,24,93,0.08);    --c-pink-hl:  rgba(190,24,93,0.06);
+  --c-purple: #6d28d9;   --c-purple-bg: rgba(109,40,217,0.08);   --c-purple-hl:rgba(109,40,217,0.06);
+  --c-slate:  #374151;   --c-slate-bg:  rgba(55,65,81,0.07);     --c-slate-hl: rgba(55,65,81,0.05);
+  --c-orange: #b45309;   --c-orange-bg: rgba(180,83,9,0.08);     --c-orange-hl:rgba(180,83,9,0.06);
+
+  --step-bg:  #eef0fb;
+  --kbd-bg:   #e2e5f0;
+  --kbd-text: #1c1f33;
+  --warn-bg:  rgba(185,28,28,0.06);
+  --tip-bg:   rgba(22,101,52,0.06);
+  --trick-bg: rgba(109,40,217,0.07);
+}
+
+/* ─────────────────────────────────────────
+   DARK THEME
+───────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg:        #0d0f1c;
+  --surface:   #13162a;
+  --surface2:  #191d33;
+  --surface3:  #1f2440;
+  --border:    #262d4a;
+  --text:      #e4e6f5;
+  --muted:     #8b93b8;
+  --shadow:    0 2px 10px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.4);
+
+  --c-blue:   #5b9cf6;   --c-blue-bg:   rgba(91,156,246,0.12);   --c-blue-hl:  rgba(91,156,246,0.08);
+  --c-teal:   #2dd4bf;   --c-teal-bg:   rgba(45,212,191,0.10);   --c-teal-hl:  rgba(45,212,191,0.07);
+  --c-green:  #4ade80;   --c-green-bg:  rgba(74,222,128,0.10);   --c-green-hl: rgba(74,222,128,0.07);
+  --c-amber:  #fbbf24;   --c-amber-bg:  rgba(251,191,36,0.10);   --c-amber-hl: rgba(251,191,36,0.07);
+  --c-red:    #f87171;   --c-red-bg:    rgba(248,113,113,0.10);  --c-red-hl:   rgba(248,113,113,0.07);
+  --c-pink:   #f472b6;   --c-pink-bg:   rgba(244,114,182,0.10);  --c-pink-hl:  rgba(244,114,182,0.07);
+  --c-purple: #c084fc;   --c-purple-bg: rgba(192,132,252,0.10);  --c-purple-hl:rgba(192,132,252,0.07);
+  --c-slate:  #94a3b8;   --c-slate-bg:  rgba(148,163,184,0.08);  --c-slate-hl: rgba(148,163,184,0.06);
+  --c-orange: #fb923c;   --c-orange-bg: rgba(251,146,60,0.10);   --c-orange-hl:rgba(251,146,60,0.07);
+
+  --step-bg:  #191d33;
+  --kbd-bg:   #262d4a;
+  --kbd-text: #e4e6f5;
+  --warn-bg:  rgba(248,113,113,0.08);
+  --tip-bg:   rgba(74,222,128,0.06);
+  --trick-bg: rgba(192,132,252,0.09);
+}
+
+/* ─────────────────────────────────────────
+   BASE
+───────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+  padding: 14px 14px 30px;
+  padding-top: 68px;
+  transition: background .25s, color .25s;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─────────────────────────────────────────
+   THEME TOGGLE
+───────────────────────────────────────── */
+.theme-btn {
+  position: fixed;
+  top: 12px; right: 12px;
+  z-index: 9999;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  padding: 6px 14px 6px 10px;
+  display: flex; align-items: center; gap: 8px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px; font-weight: 700;
+  color: var(--text);
+  transition: all .22s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 40px;
+}
+.theme-btn:active { transform: scale(.94); }
+.trk {
+  width: 34px; height: 18px;
+  background: var(--border);
+  border-radius: 20px;
+  position: relative;
+  transition: background .3s;
+  flex-shrink: 0;
+}
+[data-theme="dark"] .trk { background: var(--c-purple); }
+.thmb {
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  transition: transform .28s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"] .thmb { transform: translateX(16px); }
+.ti { font-size: 15px; line-height: 1; }
+.tlbl { white-space: nowrap; }
+
+/* ─────────────────────────────────────────
+   HEADER
+───────────────────────────────────────── */
+.header {
+  text-align: center;
+  padding: 18px 8px 14px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--border);
+  position: relative;
+}
+.header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  font-weight: 900;
+  color: var(--c-blue);
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.header h1 span { color: var(--c-red); }
+.header p { color: var(--muted); font-size: 11.5px; margin-top: 5px; letter-spacing: 1px; font-family: 'JetBrains Mono', monospace; }
+.badge-row { margin-top: 8px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 600;
+  padding: 3px 10px; border-radius: 20px; letter-spacing: .5px;
+  border: 1px solid;
+}
+.badge.q  { color: var(--c-blue);   border-color: var(--c-blue);   background: var(--c-blue-bg); }
+.badge.f  { color: var(--c-green);  border-color: var(--c-green);  background: var(--c-green-bg); }
+.badge.r  { color: var(--c-pink);   border-color: var(--c-pink);   background: var(--c-pink-bg); }
+.badge.pr { color: var(--c-red);    border-color: var(--c-red);    background: var(--c-red-bg); }
+
+/* ─────────────────────────────────────────
+   SECTION DIVIDER
+───────────────────────────────────────── */
+.sec {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  margin: 22px 0 11px;
+}
+.sec::before { content:''; flex:1; height:2px; background: var(--border); border-radius:2px; }
+.sec::after  { content:''; flex:1; height:2px; background: var(--border); border-radius:2px; }
+.sec.blue   { color: var(--c-blue); }
+.sec.green  { color: var(--c-green); }
+.sec.pink   { color: var(--c-pink); }
+
+/* ─────────────────────────────────────────
+   GRID
+───────────────────────────────────────── */
+.grid   { display: grid; gap: 12px; }
+.g2     { grid-template-columns: 1fr 1fr; }
+.g3     { grid-template-columns: 1fr 1fr 1fr; }
+.g13    { grid-template-columns: 1fr 2.2fr; }
+
+/* ─────────────────────────────────────────
+   CARD
+───────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: background .25s, border-color .25s;
+}
+.card::after {
+  content:'';
+  position: absolute;
+  top:0; left:0; right:0;
+  height: 3px;
+  border-radius: 12px 12px 0 0;
+}
+.card.blue::after   { background: var(--c-blue); }
+.card.teal::after   { background: var(--c-teal); }
+.card.green::after  { background: var(--c-green); }
+.card.amber::after  { background: var(--c-amber); }
+.card.red::after    { background: var(--c-red); }
+.card.pink::after   { background: var(--c-pink); }
+.card.purple::after { background: var(--c-purple); }
+.card.slate::after  { background: var(--c-slate); }
+.card.orange::after { background: var(--c-orange); }
+
+/* ─────────────────────────────────────────
+   CARD HEADER
+───────────────────────────────────────── */
+.ch {
+  display: flex; align-items: flex-start; gap: 9px;
+  margin-bottom: 11px;
+}
+.ch-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px; font-weight: 900;
+  padding: 2px 7px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  letter-spacing: .5px;
+}
+.ch-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13.5px; font-weight: 800;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.ch-sub { font-size: 11px; color: var(--muted); font-weight: 500; margin-top: 1px; }
+
+/* num colors */
+.num-blue   { background: var(--c-blue-bg);   color: var(--c-blue); }
+.num-teal   { background: var(--c-teal-bg);   color: var(--c-teal); }
+.num-green  { background: var(--c-green-bg);  color: var(--c-green); }
+.num-amber  { background: var(--c-amber-bg);  color: var(--c-amber); }
+.num-red    { background: var(--c-red-bg);    color: var(--c-red); }
+.num-pink   { background: var(--c-pink-bg);   color: var(--c-pink); }
+.num-purple { background: var(--c-purple-bg); color: var(--c-purple); }
+.num-slate  { background: var(--c-slate-bg);  color: var(--c-slate); }
+.num-orange { background: var(--c-orange-bg); color: var(--c-orange); }
+
+/* ─────────────────────────────────────────
+   STEPS
+───────────────────────────────────────── */
+.steps { counter-reset: stp; list-style: none; }
+.steps li {
+  counter-increment: stp;
+  display: flex; gap: 9px;
+  padding: 5px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 12.5px;
+  line-height: 1.5;
+  align-items: flex-start;
+}
+.steps li:last-child { border-bottom: none; }
+.steps li::before {
+  content: counter(stp);
+  background: var(--step-bg);
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  min-width: 20px; height: 20px;
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─────────────────────────────────────────
+   KBD (keyboard key styles for clicks)
+───────────────────────────────────────── */
+kbd {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; font-weight: 600;
+  background: var(--kbd-bg);
+  color: var(--kbd-text);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+  display: inline-block;
+}
+kbd.blue   { background: var(--c-blue-bg);   color: var(--c-blue);   border-color: var(--c-blue); }
+kbd.green  { background: var(--c-green-bg);  color: var(--c-green);  border-color: var(--c-green); }
+kbd.amber  { background: var(--c-amber-bg);  color: var(--c-amber);  border-color: var(--c-amber); }
+kbd.red    { background: var(--c-red-bg);    color: var(--c-red);    border-color: var(--c-red); }
+kbd.teal   { background: var(--c-teal-bg);   color: var(--c-teal);   border-color: var(--c-teal); }
+kbd.pink   { background: var(--c-pink-bg);   color: var(--c-pink);   border-color: var(--c-pink); }
+kbd.purple { background: var(--c-purple-bg); color: var(--c-purple); border-color: var(--c-purple); }
+kbd.orange { background: var(--c-orange-bg); color: var(--c-orange); border-color: var(--c-orange); }
+
+/* Arrow separator */
+.arr { color: var(--muted); margin: 0 2px; font-size: 11px; }
+
+/* ─────────────────────────────────────────
+   BOXES: warn / tip / trick
+───────────────────────────────────────── */
+.warn, .tip, .trick, .note {
+  border-left: 3px solid;
+  padding: 6px 10px;
+  border-radius: 0 7px 7px 0;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.warn  { background: var(--warn-bg);  border-color: var(--c-red);    color: var(--c-red); }
+.tip   { background: var(--tip-bg);   border-color: var(--c-green);  color: var(--text); }
+.trick { background: var(--trick-bg); border-color: var(--c-purple); color: var(--text); }
+.note  { background: var(--c-blue-hl); border-color: var(--c-blue);  color: var(--text); }
+.warn strong, .tip strong, .trick strong { font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; display: block; margin-bottom: 2px; }
+.warn strong  { color: var(--c-red); }
+.tip strong   { color: var(--c-green); }
+.trick strong { color: var(--c-purple); }
+.note strong  { color: var(--c-blue); }
+
+/* ─────────────────────────────────────────
+   CHIP / TAG
+───────────────────────────────────────── */
+.chip {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 600;
+  padding: 2px 7px; border-radius: 4px;
+  border: 1px solid; margin: 1px;
+  white-space: nowrap;
+}
+.chip.blue   { background: var(--c-blue-bg);   color: var(--c-blue);   border-color: var(--c-blue); }
+.chip.teal   { background: var(--c-teal-bg);   color: var(--c-teal);   border-color: var(--c-teal); }
+.chip.green  { background: var(--c-green-bg);  color: var(--c-green);  border-color: var(--c-green); }
+.chip.amber  { background: var(--c-amber-bg);  color: var(--c-amber);  border-color: var(--c-amber); }
+.chip.red    { background: var(--c-red-bg);    color: var(--c-red);    border-color: var(--c-red); }
+.chip.pink   { background: var(--c-pink-bg);   color: var(--c-pink);   border-color: var(--c-pink); }
+.chip.purple { background: var(--c-purple-bg); color: var(--c-purple); border-color: var(--c-purple); }
+.chip.orange { background: var(--c-orange-bg); color: var(--c-orange); border-color: var(--c-orange); }
+.chip.slate  { background: var(--c-slate-bg);  color: var(--c-slate);  border-color: var(--c-slate); }
+
+/* ─────────────────────────────────────────
+   KV ROW
+───────────────────────────────────────── */
+.kv { display: flex; gap: 8px; margin: 3px 0; align-items: flex-start; font-size: 12.5px; }
+.kk { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--muted); min-width: 72px; flex-shrink: 0; padding-top: 2px; }
+
+/* ─────────────────────────────────────────
+   COMPARE TABLE
+───────────────────────────────────────── */
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th {
+  background: var(--surface2);
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; text-transform: uppercase; letter-spacing: .5px;
+  padding: 6px 9px; text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+td {
+  padding: 5px 9px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top; font-size: 12px;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--surface2); }
+
+/* ─────────────────────────────────────────
+   FLOW PATH (breadcrumb steps)
+───────────────────────────────────────── */
+.flow {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 4px; margin: 8px 0 4px;
+}
+.fstep {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; font-weight: 600;
+  background: var(--surface2);
+  color: var(--text);
+  padding: 3px 9px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.farr { color: var(--muted); font-size: 11px; }
+
+/* ─────────────────────────────────────────
+   QUERY TYPE BANNER
+───────────────────────────────────────── */
+.qtag {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  padding: 2px 8px; border-radius: 5px;
+  border: 1.5px solid;
+  margin-bottom: 8px;
+}
+
+/* ─────────────────────────────────────────
+   CRITERIA CODE BLOCK
+───────────────────────────────────────── */
+.crit {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 6px 0;
+  color: var(--c-teal);
+  word-break: break-all;
+}
+.crit .cm { color: var(--muted); font-size: 10px; }
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+.footer {
+  text-align: center;
+  margin-top: 26px;
+  padding: 14px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; letter-spacing: 1px;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .g3 { grid-template-columns: 1fr 1fr; }
+  .g13 { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
+  body { padding: 10px 10px 28px; padding-top: 62px; }
+  .g2, .g3 { grid-template-columns: 1fr; }
+  .g13 { grid-template-columns: 1fr; }
+  .header h1 { font-size: 1.15rem; }
+  .card { padding: 12px 12px; }
+  .ch-title { font-size: 12.5px; }
+  kbd { font-size: 10px; }
+  .tlbl { display: none; }
+  .theme-btn { padding: 6px 10px; }
+  .fstep { font-size: 10px; padding: 2px 7px; }
+  .crit { font-size: 11px; }
+  .sec { font-size: 10px; letter-spacing: 2px; }
+}
+@media (max-width: 360px) {
+  body { padding: 8px 8px 24px; padding-top: 58px; }
+  .header h1 { font-size: 1rem; }
+  .ch-title { font-size: 12px; }
+  td, th { padding: 4px 6px; font-size: 11px; }
+  .steps li { font-size: 12px; }
+}
+@media print {
+  .theme-btn { display: none; }
+  body { background: #fff; color: #000; padding: 10px; }
+  .card { page-break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+}
+</style>
+</head>
+<body>
+
+<!-- THEME TOGGLE -->
+<button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+  <span class="ti" id="ti">☀️</span>
+  <div class="trk"><div class="thmb"></div></div>
+  <span class="tlbl" id="tlbl">Dark Mode</span>
+</button>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>⚡ Access <span>Practical</span> Cheat Sheet</h1>
+  <p>QUERIES · FORMS · REPORTS · STEP BY STEP</p>
+  <div class="badge-row">
+    <span class="badge q">9 Query Types</span>
+    <span class="badge f">3 Form Topics</span>
+    <span class="badge r">3 Report Topics</span>
+    <span class="badge pr">🔥 Practical Exam</span>
+  </div>
+</div>
+
+<!-- ═══════════════ QUERIES ═══════════════ -->
+<div class="sec blue">📋 Queries</div>
+
+<!-- ROW 1: Select + Make Table -->
+<div class="grid g2">
+
+  <!-- SELECT QUERY -->
+  <div class="card blue">
+    <div class="ch">
+      <span class="ch-num num-blue">Q1</span>
+      <div>
+        <div class="ch-title">Select Query</div>
+        <div class="ch-sub">Reads data — never changes anything</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-blue);border-color:var(--c-blue);background:var(--c-blue-bg)">📖 READ ONLY · SAFE</div>
+    <div class="flow">
+      <span class="fstep">Create</span><span class="farr">›</span>
+      <span class="fstep">Query Design</span><span class="farr">›</span>
+      <span class="fstep">Add Table</span><span class="farr">›</span>
+      <span class="fstep">Drag Fields</span><span class="farr">›</span>
+      <span class="fstep">▶ Run</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Go to <kbd class="blue">Create</kbd> tab → click <kbd class="blue">Query Design</kbd></li>
+      <li>In "Show Table" popup: <kbd>double-click</kbd> your table → <kbd>Close</kbd></li>
+      <li>Double-click each field you want OR drag to the grid below</li>
+      <li>In <b>Criteria</b> row: type condition e.g. <span class="crit">"Alice"  or  &gt;18  or  Like "A*"</span></li>
+      <li>Click <kbd class="blue">▶ Run</kbd> (red ! button) to see results</li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>SELECT = "Show me stuff" — like a search. Just READS, never touches data.</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>Add <b>Sort</b> row = Ascending/Descending. Uncheck <b>Show</b> box to hide a field used only for filtering.</div>
+  </div>
+
+  <!-- MAKE-TABLE QUERY -->
+  <div class="card teal">
+    <div class="ch">
+      <span class="ch-num num-teal">Q2</span>
+      <div>
+        <div class="ch-title">Make-Table Query</div>
+        <div class="ch-sub">Creates a brand new permanent table</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-teal);border-color:var(--c-teal);background:var(--c-teal-bg)">🏗️ ACTION · CREATES NEW TABLE</div>
+    <div class="flow">
+      <span class="fstep">Query Design</span><span class="farr">›</span>
+      <span class="fstep">Design tab</span><span class="farr">›</span>
+      <span class="fstep">Make Table</span><span class="farr">›</span>
+      <span class="fstep">Name it</span><span class="farr">›</span>
+      <span class="fstep">▶ Run</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Build a <b>Select Query</b> first (set fields + criteria)</li>
+      <li>In <kbd class="teal">Query Design</kbd> tab → click <kbd class="teal">Make Table</kbd></li>
+      <li>In the popup: type a <b>new table name</b> e.g. <i>TopStudents</i> → <kbd>OK</kbd></li>
+      <li>Click <kbd class="teal">▶ Run</kbd> → confirm the warning popup → Done!</li>
+      <li>Check the new table appears in the left panel</li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>"Make Table" = <b>COPY &amp; SAVE results into a new box</b>. Like taking a photo of filtered data.</div>
+    <div class="warn"><strong>⚠️ Watch Out</strong>Re-running overwrites the old table with the same name — no undo!</div>
+  </div>
+</div>
+
+<!-- ROW 2: Append + Delete -->
+<div class="grid g2" style="margin-top:12px">
+
+  <!-- APPEND QUERY -->
+  <div class="card green">
+    <div class="ch">
+      <span class="ch-num num-green">Q3</span>
+      <div>
+        <div class="ch-title">Append Query</div>
+        <div class="ch-sub">Adds rows from one table INTO another</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-green);border-color:var(--c-green);background:var(--c-green-bg)">➕ ACTION · ADDS ROWS</div>
+    <div class="flow">
+      <span class="fstep">Query Design</span><span class="farr">›</span>
+      <span class="fstep">Append</span><span class="farr">›</span>
+      <span class="fstep">Choose Target</span><span class="farr">›</span>
+      <span class="fstep">Map Fields</span><span class="farr">›</span>
+      <span class="fstep">▶ Run</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Open <kbd class="green">Query Design</kbd> → add <b>SOURCE</b> table</li>
+      <li>Click <kbd class="green">Append</kbd> in the Design tab</li>
+      <li>Popup: choose the <b>TARGET</b> (destination) table → <kbd>OK</kbd></li>
+      <li>A new row <b>"Append To"</b> appears — match source fields to target fields</li>
+      <li>Click <kbd class="green">▶ Run</kbd> → confirm → rows are added to target</li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>Append = <b>"POUR"</b> data from one table into another. Source → pours into → Target.</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>Both tables must have matching field types. PK field must not duplicate — it'll error.</div>
+  </div>
+
+  <!-- DELETE QUERY -->
+  <div class="card red">
+    <div class="ch">
+      <span class="ch-num num-red">Q4</span>
+      <div>
+        <div class="ch-title">Delete Query</div>
+        <div class="ch-sub">Permanently removes matching records</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-red);border-color:var(--c-red);background:var(--c-red-bg)">🗑️ ACTION · PERMANENT DELETION</div>
+    <div class="flow">
+      <span class="fstep">Query Design</span><span class="farr">›</span>
+      <span class="fstep">Delete</span><span class="farr">›</span>
+      <span class="fstep">Set Criteria</span><span class="farr">›</span>
+      <span class="fstep">▶ Run</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Open <kbd class="red">Query Design</kbd> → add your table</li>
+      <li>Click <kbd class="red">Delete</kbd> in the Design tab</li>
+      <li>Drag the <b>*</b> (asterisk = all fields) into the grid — this targets whole rows</li>
+      <li>Also drag the field you'll filter by, set <b>Criteria</b> e.g. <span class="crit">&lt;"01/01/2020"</span></li>
+      <li>Click <kbd class="red">▶ Run</kbd> → read warning carefully → confirm</li>
+    </ol>
+    <div class="warn"><strong>⚠️ DANGER — No Undo!</strong>Always run as a SELECT first to preview what will be deleted. Only then switch to Delete.</div>
+    <div class="trick"><strong>🧠 Memory Trick</strong>Delete = <b>DESTROY</b>. Run Select first, verify rows, THEN delete. "See before you kill."</div>
+  </div>
+</div>
+
+<!-- ROW 3: Update + Crosstab -->
+<div class="grid g2" style="margin-top:12px">
+
+  <!-- UPDATE QUERY -->
+  <div class="card amber">
+    <div class="ch">
+      <span class="ch-num num-amber">Q5</span>
+      <div>
+        <div class="ch-title">Update Query</div>
+        <div class="ch-sub">Modifies values in existing records</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-amber);border-color:var(--c-amber);background:var(--c-amber-bg)">✏️ ACTION · CHANGES EXISTING DATA</div>
+    <div class="flow">
+      <span class="fstep">Query Design</span><span class="farr">›</span>
+      <span class="fstep">Update</span><span class="farr">›</span>
+      <span class="fstep">Update To row</span><span class="farr">›</span>
+      <span class="fstep">▶ Run</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Open <kbd class="amber">Query Design</kbd> → add table</li>
+      <li>Click <kbd class="amber">Update</kbd> in the Design tab</li>
+      <li>An <b>"Update To"</b> row appears below Field row</li>
+      <li>Drag the field to update → in "Update To" type new value or formula:<br>
+        <span class="crit">[Price]*1.1  <span class="cm">← increase price by 10%</span></span></li>
+      <li>Optionally set <b>Criteria</b> to limit which rows update</li>
+      <li>Click <kbd class="amber">▶ Run</kbd> → confirm</li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>"Update To" = the <b>NEW VALUE</b>. Think: "Update [field] To [new value] Where [criteria]."</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>You can reference the same field: <span style="font-family:JetBrains Mono,monospace;font-size:11px">[Salary]+500</span> adds 500 to current salary.</div>
+  </div>
+
+  <!-- CROSSTAB QUERY -->
+  <div class="card pink">
+    <div class="ch">
+      <span class="ch-num num-pink">Q6</span>
+      <div>
+        <div class="ch-title">Crosstab Query</div>
+        <div class="ch-sub">Summarises data in a row × column matrix</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-pink);border-color:var(--c-pink);background:var(--c-pink-bg)">📊 READ · PIVOT-LIKE GRID</div>
+    <div class="flow">
+      <span class="fstep">Create</span><span class="farr">›</span>
+      <span class="fstep">Query Wizard</span><span class="farr">›</span>
+      <span class="fstep">Crosstab</span><span class="farr">›</span>
+      <span class="fstep">Set Row/Col/Value</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Go to <kbd class="pink">Create</kbd> → <kbd class="pink">Query Wizard</kbd> → choose <b>Crosstab Query Wizard</b></li>
+      <li>Select the table/query to use → <kbd>Next</kbd></li>
+      <li>Choose <b>Row Heading</b> field (e.g. Month) → <kbd>Next</kbd></li>
+      <li>Choose <b>Column Heading</b> field (e.g. Product) → <kbd>Next</kbd></li>
+      <li>Choose <b>Value</b> field + function (e.g. Sum of Sales) → <kbd>Next</kbd></li>
+      <li>Name the query → <kbd>Finish</kbd></li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>ROW = "what goes down left" · COL = "what goes across top" · VALUE = "numbers in the middle"</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>Can also do manually: Query Design → Crosstab button → set Crosstab row to "Row Heading / Column Heading / Value"</div>
+  </div>
+</div>
+
+<!-- ROW 4: Parameter + Find Duplicates -->
+<div class="grid g2" style="margin-top:12px">
+
+  <!-- PARAMETER QUERY -->
+  <div class="card purple">
+    <div class="ch">
+      <span class="ch-num num-purple">Q7</span>
+      <div>
+        <div class="ch-title">Parameter Query</div>
+        <div class="ch-sub">Asks user for input before running</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-purple);border-color:var(--c-purple);background:var(--c-purple-bg)">❓ DYNAMIC · USER-DRIVEN</div>
+    <div class="flow">
+      <span class="fstep">Select Query</span><span class="farr">›</span>
+      <span class="fstep">Criteria row</span><span class="farr">›</span>
+      <span class="fstep">Type [prompt]</span><span class="farr">›</span>
+      <span class="fstep">▶ Run</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Build a <b>Select Query</b> as normal</li>
+      <li>In the <b>Criteria</b> row of the field to filter, type your prompt inside <b>square brackets</b>:</li>
+    </ol>
+    <div class="crit">[Enter Student Name:]<br>[Enter Min Age:]</div>
+    <ol class="steps" style="margin-top:4px" start="3">
+      <li>Click <kbd class="purple">▶ Run</kbd> — a popup appears asking for input</li>
+      <li>User types value → results filter to match</li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>[ ] square brackets = <b>ASK THE USER</b>. Whatever is inside becomes the popup question. No brackets = just criteria. With brackets = parameter.</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>Can combine: <span style="font-family:JetBrains Mono,monospace;font-size:11px">Between [Start Date:] And [End Date:]</span></div>
+  </div>
+
+  <!-- FIND DUPLICATES -->
+  <div class="card orange">
+    <div class="ch">
+      <span class="ch-num num-orange">Q8</span>
+      <div>
+        <div class="ch-title">Find Duplicates Query</div>
+        <div class="ch-sub">Finds records with repeated values</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-orange);border-color:var(--c-orange);background:var(--c-orange-bg)">🔍 WIZARD · FINDS REPEATS</div>
+    <div class="flow">
+      <span class="fstep">Create</span><span class="farr">›</span>
+      <span class="fstep">Query Wizard</span><span class="farr">›</span>
+      <span class="fstep">Find Duplicates</span><span class="farr">›</span>
+      <span class="fstep">Finish</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Go to <kbd class="orange">Create</kbd> → <kbd class="orange">Query Wizard</kbd></li>
+      <li>Choose <b>"Find Duplicates Query Wizard"</b> → <kbd>Next</kbd></li>
+      <li>Select the table to search → <kbd>Next</kbd></li>
+      <li>Pick the <b>field(s) that might have duplicates</b> (e.g. Name, Email) → <kbd>Next</kbd></li>
+      <li>Choose any extra fields to show → <kbd>Next</kbd></li>
+      <li>Name the query → <kbd>Finish</kbd> — runs and shows repeated rows</li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>"Duplicates = Twins." The wizard finds all the twins (same value appearing more than once).</div>
+  </div>
+</div>
+
+<!-- ROW 5: Find Unmatched (full width) -->
+<div class="grid g13" style="margin-top:12px">
+
+  <!-- FIND UNMATCHED -->
+  <div class="card slate">
+    <div class="ch">
+      <span class="ch-num num-slate">Q9</span>
+      <div>
+        <div class="ch-title">Find Unmatched Query</div>
+        <div class="ch-sub">Finds records in A with no related record in B</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-slate);border-color:var(--c-slate);background:var(--c-slate-bg)">🔗 WIZARD · FINDS ORPHANS</div>
+    <div class="flow">
+      <span class="fstep">Create</span><span class="farr">›</span>
+      <span class="fstep">Query Wizard</span><span class="farr">›</span>
+      <span class="fstep">Find Unmatched</span><span class="farr">›</span>
+      <span class="fstep">Set both tables</span><span class="farr">›</span>
+      <span class="fstep">Finish</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>Go to <kbd>Create</kbd> → <kbd>Query Wizard</kbd> → choose <b>"Find Unmatched Query Wizard"</b></li>
+      <li>Select <b>Table A</b> (the one you want results FROM, e.g. Customers) → <kbd>Next</kbd></li>
+      <li>Select <b>Table B</b> (the related table, e.g. Orders) → <kbd>Next</kbd></li>
+      <li>Pick the <b>matching field</b> in both tables (usually the FK/PK, e.g. CustomerID) → <kbd>Next</kbd></li>
+      <li>Select extra fields to show → <kbd>Next</kbd> → Name → <kbd>Finish</kbd></li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>"Unmatched = Lonely records." Customers with NO orders. Students with NO enrolments. The wizard finds who's been LEFT OUT.</div>
+  </div>
+
+  <!-- QUICK COMPARE TABLE -->
+  <div class="card blue">
+    <div class="ch">
+      <span class="ch-num num-blue">Q✦</span>
+      <div>
+        <div class="ch-title">All Queries — Quick Compare</div>
+        <div class="ch-sub">Safe vs dangerous at a glance</div>
+      </div>
+    </div>
+    <div class="tw">
+    <table>
+      <tr><th>Query</th><th>Changes Data?</th><th>How to Make</th><th>Key Thing</th></tr>
+      <tr><td><span class="chip blue">Select</span></td><td style="color:var(--c-green)">✘ Never</td><td>Design view</td><td>Criteria row = filter</td></tr>
+      <tr><td><span class="chip teal">Make-Table</span></td><td style="color:var(--c-red)">✔ Creates table</td><td>Design → Make Table</td><td>Overwrites on re-run</td></tr>
+      <tr><td><span class="chip green">Append</span></td><td style="color:var(--c-red)">✔ Adds rows</td><td>Design → Append</td><td>"Append To" maps fields</td></tr>
+      <tr><td><span class="chip red">Delete</span></td><td style="color:var(--c-red)">✔ Removes rows</td><td>Design → Delete</td><td>Use * for whole row</td></tr>
+      <tr><td><span class="chip amber">Update</span></td><td style="color:var(--c-red)">✔ Edits values</td><td>Design → Update</td><td>"Update To" = new value</td></tr>
+      <tr><td><span class="chip pink">Crosstab</span></td><td style="color:var(--c-green)">✘ Never</td><td>Wizard or Design</td><td>Row/Col/Value</td></tr>
+      <tr><td><span class="chip purple">Parameter</span></td><td style="color:var(--c-green)">✘ Never</td><td>Select + [prompt]</td><td>[ ] = ask user</td></tr>
+      <tr><td><span class="chip orange">Find Dup.</span></td><td style="color:var(--c-green)">✘ Never</td><td>Wizard</td><td>Pick duplicate field</td></tr>
+      <tr><td><span class="chip slate">Find Unm.</span></td><td style="color:var(--c-green)">✘ Never</td><td>Wizard</td><td>Two tables + link field</td></tr>
+    </table>
+    </div>
+    <div class="warn" style="margin-top:10px"><strong>⚠️ Action Query Rule</strong>Make-Table, Append, Delete, Update = ACTION queries. Always preview with Select first. All show a warning — click Yes to confirm.</div>
+  </div>
+</div>
+
+<!-- ═══════════════ FORMS ═══════════════ -->
+<div class="sec green">📝 Forms</div>
+<div class="grid g3">
+
+  <!-- BASIC FORMS -->
+  <div class="card green">
+    <div class="ch">
+      <span class="ch-num num-green">F1</span>
+      <div>
+        <div class="ch-title">Creating Basic Forms</div>
+        <div class="ch-sub">User-friendly data entry screen</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-green);border-color:var(--c-green);background:var(--c-green-bg)">📥 INPUT · USER INTERFACE</div>
+
+    <b style="font-size:12px;color:var(--muted)">METHOD 1 — Auto (Fastest)</b>
+    <div class="flow" style="margin-top:4px">
+      <span class="fstep">Select Table</span><span class="farr">›</span>
+      <span class="fstep">Create</span><span class="farr">›</span>
+      <span class="fstep">Form</span>
+    </div>
+
+    <b style="font-size:12px;color:var(--muted);display:block;margin-top:8px">METHOD 2 — Wizard (More Control)</b>
+    <ol class="steps" style="margin-top:4px">
+      <li><kbd class="green">Create</kbd> → <kbd class="green">Form Wizard</kbd></li>
+      <li>Pick table/query as data source → add fields using <kbd>&gt;&gt;</kbd></li>
+      <li>Choose layout: <b>Columnar</b> (one record) / <b>Tabular</b> (like spreadsheet) / <b>Datasheet</b></li>
+      <li>Choose style → name it → <kbd>Finish</kbd></li>
+    </ol>
+
+    <b style="font-size:12px;color:var(--muted);display:block;margin-top:8px">METHOD 3 — Design View (Most Control)</b>
+    <div class="flow">
+      <span class="fstep">Create</span><span class="farr">›</span>
+      <span class="fstep">Form Design</span><span class="farr">›</span>
+      <span class="fstep">Add Field List</span>
+    </div>
+    <div class="trick" style="margin-top:8px"><strong>🧠 Memory Trick</strong>Form = <b>FACE of the database</b>. Users see the form, not the raw table. Columnar = one-at-a-time. Tabular = all rows.</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>To switch views: <kbd>Right-click</kbd> form tab → Design / Form / Layout view.</div>
+  </div>
+
+  <!-- BOUND & UNBOUND -->
+  <div class="card blue">
+    <div class="ch">
+      <span class="ch-num num-blue">F2</span>
+      <div>
+        <div class="ch-title">Bound &amp; Unbound Controls</div>
+        <div class="ch-sub">Connected vs standalone elements</div>
+      </div>
+    </div>
+    <div class="tw">
+    <table>
+      <tr><th></th><th style="color:var(--c-green)">Bound</th><th style="color:var(--c-red)">Unbound</th></tr>
+      <tr><td><b>Linked to?</b></td><td>A table field</td><td>Nothing (standalone)</td></tr>
+      <tr><td><b>Changes data?</b></td><td>Yes — edits table</td><td>No — display only</td></tr>
+      <tr><td><b>Example</b></td><td>Name textbox</td><td>Title label, logo</td></tr>
+      <tr><td><b>Control Source</b></td><td>= FieldName</td><td>Empty</td></tr>
+    </table>
+    </div>
+    <div style="margin-top:10px">
+      <div class="kv"><span class="kk">Set bound:</span> <span>In Design view → click control → Properties → <b>Control Source</b> → choose field</span></div>
+      <div class="kv"><span class="kk">Check:</span> <span>If Control Source is empty = Unbound. Has a field name = Bound.</span></div>
+    </div>
+    <div class="trick" style="margin-top:8px"><strong>🧠 Memory Trick</strong><b>Bound</b> = <b>BONDED</b> to the table (like a chain). <b>Unbound</b> = <b>FREE</b> floating (like a sticky note on top).</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>Calculated control = also unbound. Control Source = <span style="font-family:JetBrains Mono,monospace;font-size:11px">=[Price]*[Qty]</span>. Starts with = sign.</div>
+  </div>
+
+  <!-- LIST BOX / COMBO BOX -->
+  <div class="card purple">
+    <div class="ch">
+      <span class="ch-num num-purple">F3</span>
+      <div>
+        <div class="ch-title">List Box / Combo Box</div>
+        <div class="ch-sub">Dropdown or fixed list for picking values</div>
+      </div>
+    </div>
+    <div class="tw">
+    <table>
+      <tr><th></th><th style="color:var(--c-blue)">List Box</th><th style="color:var(--c-purple)">Combo Box</th></tr>
+      <tr><td><b>Looks like</b></td><td>Always open list</td><td>Dropdown (click to open)</td></tr>
+      <tr><td><b>User can type?</b></td><td>No — pick only</td><td>Yes — type or pick</td></tr>
+      <tr><td><b>Space used</b></td><td>More (always visible)</td><td>Less (collapses)</td></tr>
+      <tr><td><b>Best for</b></td><td>Small fixed lists</td><td>Long lists, most forms</td></tr>
+    </table>
+    </div>
+    <b style="font-size:12px;color:var(--muted);display:block;margin-top:10px">How to Add (Design View):</b>
+    <ol class="steps" style="margin-top:4px">
+      <li>Open form in <kbd class="purple">Design View</kbd></li>
+      <li>In <b>Design tab</b> → <kbd class="purple">Controls group</kbd> → click <b>List Box</b> or <b>Combo Box</b> icon</li>
+      <li>Draw it on the form — Wizard launches automatically</li>
+      <li>Choose source: <b>Table/Query</b> or <b>type values yourself</b></li>
+      <li>Set <b>Bound Column</b> (which column value gets saved) → Finish</li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong><b>Combo</b> = Combination of textbox + list (you can type OR pick). <b>List</b> = List only, always visible, pick only.</div>
+  </div>
+</div>
+
+<!-- ═══════════════ REPORTS ═══════════════ -->
+<div class="sec pink">📄 Reports</div>
+<div class="grid g3">
+
+  <!-- CREATING REPORTS -->
+  <div class="card pink">
+    <div class="ch">
+      <span class="ch-num num-pink">R1</span>
+      <div>
+        <div class="ch-title">Creating Reports</div>
+        <div class="ch-sub">Formatted, printable data output</div>
+      </div>
+    </div>
+    <div class="qtag" style="color:var(--c-pink);border-color:var(--c-pink);background:var(--c-pink-bg)">📤 OUTPUT ONLY · READ-ONLY</div>
+
+    <b style="font-size:12px;color:var(--muted)">METHOD 1 — Auto (Fastest)</b>
+    <div class="flow" style="margin-top:4px">
+      <span class="fstep">Select Table/Query</span><span class="farr">›</span>
+      <span class="fstep">Create</span><span class="farr">›</span>
+      <span class="fstep">Report</span>
+    </div>
+
+    <b style="font-size:12px;color:var(--muted);display:block;margin-top:8px">METHOD 2 — Wizard</b>
+    <ol class="steps" style="margin-top:4px">
+      <li><kbd class="pink">Create</kbd> → <kbd class="pink">Report Wizard</kbd></li>
+      <li>Choose table/query → add fields using <kbd>&gt;&gt;</kbd> → <kbd>Next</kbd></li>
+      <li>Add <b>Grouping levels</b> (optional) → <kbd>Next</kbd></li>
+      <li>Set <b>Sort order</b> (up to 4 fields) → <kbd>Next</kbd></li>
+      <li>Choose <b>Layout</b>: Tabular / Columnar / Justified → orientation → <kbd>Next</kbd></li>
+      <li>Name the report → <kbd>Finish</kbd></li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong>Report = <b>RECEIPT</b>. You print it out and show it. Nobody types into it. It's the READ-ONLY output version of a form.</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>To edit: right-click report → <b>Design View</b>. To preview: right-click → <b>Print Preview</b>.</div>
+  </div>
+
+  <!-- SORTING AND GROUPING -->
+  <div class="card amber">
+    <div class="ch">
+      <span class="ch-num num-amber">R2</span>
+      <div>
+        <div class="ch-title">Sorting &amp; Grouping</div>
+        <div class="ch-sub">Organise records &amp; add subtotals</div>
+      </div>
+    </div>
+    <div class="tw">
+    <table>
+      <tr><th></th><th>Sort</th><th>Group</th></tr>
+      <tr><td><b>What it does</b></td><td>Orders records A→Z or Z→A</td><td>Clusters records by a field value</td></tr>
+      <tr><td><b>Result</b></td><td>Records in order</td><td>Records under a heading</td></tr>
+      <tr><td><b>Example</b></td><td>Students A→Z by Name</td><td>Students grouped by Course</td></tr>
+    </table>
+    </div>
+    <b style="font-size:12px;color:var(--muted);display:block;margin-top:10px">How to Set in Design View:</b>
+    <ol class="steps" style="margin-top:4px">
+      <li>Open report in <kbd class="amber">Design View</kbd></li>
+      <li>In <b>Design tab</b> → click <kbd class="amber">Group &amp; Sort</kbd></li>
+      <li>A panel opens at the bottom — click <kbd>Add a group</kbd> or <kbd>Add a sort</kbd></li>
+      <li>Choose the field → set Ascending / Descending</li>
+      <li>For grouping: expand options → set <b>Group Header</b> / <b>Group Footer</b> (for subtotals)</li>
+      <li>Add a <b>Text Box</b> in Group Footer → Control Source = <span style="font-family:JetBrains Mono,monospace;font-size:11px">=Sum([Salary])</span></li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong><b>Sort</b> = like alphabetising a list. <b>Group</b> = like putting things in folders. Sort first (A→Z), then Group (by category).</div>
+    <div class="tip"><strong>💡 Exam Tip</strong>Functions in footer: <span style="font-family:JetBrains Mono,monospace;font-size:11px">=Sum()</span> &nbsp;<span style="font-family:JetBrains Mono,monospace;font-size:11px">=Count()</span> &nbsp;<span style="font-family:JetBrains Mono,monospace;font-size:11px">=Avg()</span> &nbsp;<span style="font-family:JetBrains Mono,monospace;font-size:11px">=Max()</span> &nbsp;<span style="font-family:JetBrains Mono,monospace;font-size:11px">=Min()</span></div>
+  </div>
+
+  <!-- HEADER AND FOOTER -->
+  <div class="card teal">
+    <div class="ch">
+      <span class="ch-num num-teal">R3</span>
+      <div>
+        <div class="ch-title">Header &amp; Footer</div>
+        <div class="ch-sub">5 section zones of a report</div>
+      </div>
+    </div>
+    <!-- 5 sections visual -->
+    <div style="border:1.5px solid var(--border);border-radius:8px;overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:10.5px;margin-bottom:10px">
+      <div style="background:var(--c-pink-bg);border-bottom:1px dashed var(--border);padding:5px 10px;color:var(--c-pink);font-weight:700">📌 Report Header — appears ONCE at very top (title, logo)</div>
+      <div style="background:var(--c-blue-bg);border-bottom:1px dashed var(--border);padding:5px 10px;color:var(--c-blue);font-weight:700">📄 Page Header — repeated at top of EVERY page (column labels)</div>
+      <div style="background:var(--step-bg);border-bottom:1px dashed var(--border);padding:5px 10px;color:var(--muted)">⬛ [Group Header] — optional, appears before each group</div>
+      <div style="background:var(--surface);border-bottom:1px dashed var(--border);padding:5px 10px;color:var(--text);font-weight:600">▤ Detail — the actual data records (repeats per row)</div>
+      <div style="background:var(--step-bg);border-bottom:1px dashed var(--border);padding:5px 10px;color:var(--muted)">⬛ [Group Footer] — optional, subtotals per group</div>
+      <div style="background:var(--c-blue-bg);border-bottom:1px dashed var(--border);padding:5px 10px;color:var(--c-blue);font-weight:700">📄 Page Footer — repeated at bottom of EVERY page (=Page())</div>
+      <div style="background:var(--c-pink-bg);padding:5px 10px;color:var(--c-pink);font-weight:700">📌 Report Footer — appears ONCE at very end (grand total)</div>
+    </div>
+    <b style="font-size:12px;color:var(--muted)">How to show/hide sections:</b>
+    <div class="flow" style="margin-top:4px">
+      <span class="fstep">Design View</span><span class="farr">›</span>
+      <span class="fstep">Arrange tab</span><span class="farr">›</span>
+      <span class="fstep">Page Header/Footer</span>
+    </div>
+    <ol class="steps" style="margin-top:6px">
+      <li>In Design View: right-click any section → toggle Header/Footer</li>
+      <li>Add <b>Label</b> to Report Header → type your title</li>
+      <li>Add <b>Text Box</b> to Page Footer → <span style="font-family:JetBrains Mono,monospace;font-size:11px">="Page " &amp; [Page] &amp; " of " &amp; [Pages]</span></li>
+      <li>Add <b>Text Box</b> to Report Footer → <span style="font-family:JetBrains Mono,monospace;font-size:11px">=Sum([Salary])</span></li>
+    </ol>
+    <div class="trick"><strong>🧠 Memory Trick</strong><b>Report H/F</b> = Once each (sandwich bread at start &amp; end). <b>Page H/F</b> = Every page (like a TV show intro that repeats each episode).</div>
+  </div>
+</div>
+
+<!-- MASTER QUICK FIRE SUMMARY -->
+<div class="sec blue">🧠 Master Quick-Fire Summary</div>
+<div class="card blue">
+  <div class="ch">
+    <span class="ch-num num-blue">★</span>
+    <div>
+      <div class="ch-title">Say these out loud before the exam!</div>
+    </div>
+  </div>
+  <div class="grid g3" style="gap:8px">
+    <div class="trick"><strong>QUERIES</strong>
+      <div style="margin-top:4px;font-size:12px;line-height:1.8">
+        <b>Select</b> = Just look, no touch<br>
+        <b>Make-Table</b> = Save results as new table<br>
+        <b>Append</b> = Pour rows into target<br>
+        <b>Delete</b> = Destroy matching rows ⚠️<br>
+        <b>Update</b> = "Update To" = new value<br>
+        <b>Crosstab</b> = Row × Col matrix<br>
+        <b>Parameter</b> = [ask user in brackets]<br>
+        <b>Find Dup</b> = Find twins (wizard)<br>
+        <b>Find Unmatch</b> = Find lonely orphans
+      </div>
+    </div>
+    <div class="tip"><strong>FORMS</strong>
+      <div style="margin-top:4px;font-size:12px;line-height:1.8">
+        <b>Auto Form</b> = Create → Form (1 click)<br>
+        <b>Wizard</b> = Create → Form Wizard<br>
+        <b>Columnar</b> = 1 record at a time<br>
+        <b>Tabular</b> = All rows visible<br>
+        <b>Bound</b> = linked to table field<br>
+        <b>Unbound</b> = free-floating label<br>
+        <b>Combo Box</b> = type OR pick<br>
+        <b>List Box</b> = pick only, always open<br>
+        <b>Control Source</b> = links control to field
+      </div>
+    </div>
+    <div style="background:var(--c-pink-hl,rgba(190,24,93,0.06));border-left:3px solid var(--c-pink);padding:6px 10px;border-radius:0 7px 7px 0;margin:5px 0;font-size:12px;line-height:1.5;">
+      <strong style="font-family:Outfit,sans-serif;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:4px;color:var(--c-pink)">REPORTS</strong>
+      <div style="line-height:1.8">
+        <b>Auto Report</b> = Create → Report<br>
+        <b>Wizard</b> = Create → Report Wizard<br>
+        <b>Report Header</b> = once, very top<br>
+        <b>Page Header</b> = every page top<br>
+        <b>Detail</b> = actual data rows<br>
+        <b>Page Footer</b> = every page bottom<br>
+        <b>Report Footer</b> = once, very end<br>
+        <b>Group &amp; Sort</b> = Design tab button<br>
+        <b>=Sum([Field])</b> = total in footer
+      </div>
+    </div>
+  </div>
+  <div class="warn" style="margin-top:10px"><strong>🚨 PRACTICAL EXAM GOLDEN RULES</strong>1. Action queries (Make-Table, Append, Delete, Update) ALL need Run confirmation — click Yes. &nbsp; 2. Always Save after creating anything (Ctrl+S). &nbsp; 3. For Wizards: Create tab → Query Wizard. &nbsp; 4. Switch views: right-click the object tab at top.</div>
+</div>
+
+<div class="footer">⚡ ACCESS PRACTICAL CHEAT SHEET · ALL 15 TOPICS · YOU'VE GOT THIS 🚀</div>
+
+<script>
+function toggleTheme() {
+  const h = document.documentElement;
+  const dark = h.getAttribute('data-theme') === 'dark';
+  h.setAttribute('data-theme', dark ? 'light' : 'dark');
+  document.getElementById('ti').textContent   = dark ? '☀️' : '🌙';
+  document.getElementById('tlbl').textContent = dark ? 'Dark Mode' : 'Light Mode';
+  try { localStorage.setItem('pcs-theme', dark ? 'light' : 'dark'); } catch(e){}
+}
+(function(){
+  try {
+    const s = localStorage.getItem('pcs-theme');
+    if (s === 'dark') {
+      document.documentElement.setAttribute('data-theme','dark');
+      document.getElementById('ti').textContent   = '🌙';
+      document.getElementById('tlbl').textContent = 'Light Mode';
+    }
+  } catch(e){}
+})();
+</script>
+</body>
+</html>
