@@ -3,403 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Income Tax Guide — AY 26–27</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<title>Direct Tax — Income Tax Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --black: #0d0d0d;
-    --dark: #1c1c1c;
-    --mid: #555;
-    --light: #999;
-    --rule: #e0e0e0;
-    --rule-heavy: #b0b0b0;
-    --bg: #ffffff;
-    --bg-alt: #f6f6f6;
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-mono: 'IBM Plex Mono', Consolas, monospace;
-    --base-font-size: 14.5px;
+    --bg: #f5f4ef;
+    --paper: #fffdf7;
+    --ink: #1a1a18;
+    --muted: #5a5a52;
+    --accent: #c84b2f;
+    --accent2: #2f6dc8;
+    --accent3: #2a8c55;
+    --rule: #d8d6cc;
   }
 
-  html { scroll-behavior: smooth; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: var(--font-body);
-    font-size: var(--base-font-size);
-    line-height: 1.75;
-    color: var(--dark);
     background: var(--bg);
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 32px 20px;
   }
 
-  .wrapper {
-    display: flex;
-    min-height: 100vh;
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    padding: 40px 48px;
   }
 
-  /* ── Sidebar ─────────────────────────────────────── */
-  .sidebar {
-    width: 252px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    border-right: 1px solid var(--rule);
-    padding: 2rem 1.4rem 2rem 1.4rem;
-    background: var(--bg-alt);
+  .header {
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
   }
 
-  .sidebar::-webkit-scrollbar { width: 4px; }
-  .sidebar::-webkit-scrollbar-thumb { background: var(--rule-heavy); }
-
-  .sidebar .site-name {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--black);
-    text-decoration: none;
-    display: block;
-    margin-bottom: 0.25rem;
-    line-height: 1.3;
-  }
-
-  .sidebar .site-desc {
-    font-size: 0.72rem;
-    color: var(--mid);
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-  }
-
-  .sidebar .sidebar-label {
-    font-family: var(--font-body);
-    font-size: 0.66rem;
+  .header h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: -0.5px;
+  }
+
+  .header .sub {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    margin-top: 4px;
     text-transform: uppercase;
-    color: var(--light);
-    margin-bottom: 0.75rem;
-    display: block;
+    letter-spacing: 1px;
   }
 
-  .sidebar ol { list-style: none; padding: 0; }
-  .sidebar li { margin: 0; }
-
-  .sidebar a {
-    display: block;
-    font-size: 0.76rem;
-    color: var(--mid);
-    text-decoration: none;
-    padding: 0.3rem 0.6rem;
-    margin-bottom: 2px;
-    border-left: 2px solid transparent;
-    line-height: 1.35;
-    border-radius: 0 4px 4px 0;
-    transition: all 0.15s;
-  }
-
-  .sidebar a:hover {
-    color: var(--black);
-    background-color: rgba(0,0,0,0.03);
-  }
-
-  .sidebar a.active {
-    color: var(--black);
+  .section-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
     font-weight: 600;
-    border-left-color: var(--black);
-    background-color: rgba(0,0,0,0.05);
-  }
-
-  .sidebar a[rel="external"]::after {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-top: 4px solid var(--light);
-    margin-left: 4px;
-    vertical-align: middle;
-  }
-
-  /* ── Mobile Topbar ────────────────────────────────── */
-  .mobile-topbar {
-    display: none;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: var(--bg-alt);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
     border-bottom: 1px solid var(--rule);
-    padding: 12px 20px;
-    z-index: 900;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-  }
-
-  .mobile-topbar button {
-    background: none;
-    border: none;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--dark);
-    cursor: pointer;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
     display: flex;
     align-items: center;
     gap: 8px;
   }
 
-  .mobile-backdrop {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    z-index: 998;
-    opacity: 0;
-    transition: opacity 0.3s;
+  .section-title .num {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 10px;
+    padding: 1px 6px;
+    font-weight: 600;
   }
 
-  /* ── Main Content ─────────────────────────────────── */
-  .content-wrapper {
-    flex: 1;
-    min-width: 0;
+  .link-list {
     display: flex;
     flex-direction: column;
+    gap: 8px;
+    margin-bottom: 28px;
   }
 
-  .content {
-    max-width: 840px;
-    padding: 3rem 3.5rem 5rem 3.5rem;
-  }
-
-  /* ── Page Header ──────────────────────────────────── */
-  .page-header {
-    border-bottom: 2px solid var(--black);
-    padding-bottom: 1.5rem;
-    margin-bottom: 3rem;
-  }
-
-  .page-header .eyebrow {
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--light);
-    margin-bottom: 0.4rem;
-  }
-
-  .page-header h1 {
-    font-family: var(--font-heading);
-    font-size: 2.6rem;
-    font-weight: 700;
-    color: var(--black);
-    line-height: 1.1;
-  }
-
-  .page-header .meta {
-    margin-top: 0.6rem;
-    font-size: 0.8rem;
-    color: var(--light);
-    letter-spacing: 0.04em;
-  }
-
-  /* ── Section Cards ────────────────────────────────── */
-  .section-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-    margin-bottom: 2rem;
-  }
-
-  .section-card {
+  .link-item {
     border: 1px solid var(--rule);
-    border-radius: 6px;
-    padding: 1.5rem 1.75rem;
-    background: var(--bg-alt);
-    transition: border-color 0.2s, box-shadow 0.2s;
+    padding: 14px 18px;
+    background: var(--paper);
+    transition: all 0.2s;
+  }
+
+  .link-item:hover {
+    border-color: var(--accent);
+    background: #fff8f5;
+  }
+
+  .link-item a {
     text-decoration: none;
-    color: inherit;
-    display: block;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .section-card:hover {
-    border-color: var(--rule-heavy);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  .link-item a:hover .arrow {
+    transform: translateX(4px);
   }
 
-  .section-card .card-eyebrow {
-    font-size: 0.62rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--light);
-    margin-bottom: 0.35rem;
+  .link-item .link-title {
+    font-size: 14px;
+    font-weight: 500;
   }
 
-  .section-card h2 {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--black);
-    margin-bottom: 0.5rem;
-    line-height: 1.25;
+  .link-item .arrow {
+    color: var(--accent);
+    font-size: 18px;
+    transition: transform 0.2s;
   }
 
-  .section-card p {
-    font-size: 0.82rem;
-    color: var(--mid);
-    margin-bottom: 0;
-    line-height: 1.6;
-  }
-
-  .section-card .card-arrow {
-    display: inline-block;
-    margin-top: 0.6rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--dark);
-    letter-spacing: 0.05em;
-  }
-
-  /* Full-width card for sitemap / other */
-  .section-card.full-width {
-    grid-column: 1 / -1;
-  }
-
-  /* ── Intro Text ───────────────────────────────────── */
-  .intro {
-    font-size: 0.95rem;
-    color: var(--mid);
-    max-width: 600px;
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
-  }
-
-  /* ── Responsive ───────────────────────────────────── */
-  @media (max-width: 920px) {
-    .mobile-topbar { display: flex; }
-
-    .sidebar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      transform: translateX(-100%);
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 999;
-      background: var(--bg);
-      box-shadow: 2px 0 12px rgba(0,0,0,0.15);
-    }
-    .sidebar.open { transform: translateX(0); }
-    .mobile-backdrop.open { display: block; opacity: 1; }
-
-    .content { padding: 1.5rem 1.2rem 4rem 1.2rem; max-width: 100%; }
-    .section-grid { grid-template-columns: 1fr; }
+  .bottom-note {
+    border-top: 2px solid var(--ink);
+    margin-top: 28px;
+    padding-top: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--muted);
+    text-align: center;
   }
 
   @media print {
-    .sidebar, .mobile-topbar { display: none; }
-    .content { max-width: 100%; padding: 0.5rem 1rem; }
+    body { padding: 0; }
+    .page { border: none; }
   }
 </style>
 </head>
 <body>
+<div class="page">
 
-<div class="wrapper">
-
-  <nav class="sidebar" id="sidebar-nav" aria-label="Site navigation">
-    <a href="index.html" class="site-name">Income Tax Guide</a>
-    <p class="site-desc">India Income Tax Act<br>Assessment Year 26–27</p>
-    <span class="sidebar-label">Sections</span>
-    <ol>
-      <li><a href="salary-income-tax-section-15.html">Sec. 15 — Salaries</a></li>
-      <li><a href="income-from-house-property-section-22-to-27.html">Sec. 22–27 — House Property</a></li>
-      <li><a href="income-from-other-sources-section-56-to-59.html">Sec. 56–59 — Other Sources</a></li>
-      <li><a href="Post-23-07-2024 Tax Changes.html">Post 23-07-2024 Tax Changes</a></li>
-    </ol>
-    <ol>
-      <li><a href="index.html" class="active">Home / Index</a></li>
-    </ol>
-  </nav>
-
-  <div class="mobile-backdrop" id="mobile-backdrop"></div>
-
-  <div class="content-wrapper">
-
-    <div class="mobile-topbar">
-      <button id="menu-toggle-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        Menu
-      </button>
-    </div>
-
-    <main class="content">
-
-      <div class="page-header">
-        <p class="eyebrow">Income Tax Act — India</p>
-        <h1>Income Tax Guide</h1>
-        <p class="meta">Assessment Year 26–27 &nbsp;&nbsp;|&nbsp;&nbsp; Income heads covered below</p>
-      </div>
-
-      <p class="intro">
-        A structured guide to India's Income Tax Act, covering the five heads of income.
-        Each section below details the relevant provisions, deductions, exemptions, and computations
-        as applicable for Assessment Year 2026–27.
-      </p>
-
-      <div class="section-grid">
-
-        <a class="section-card" href="salary-income-tax-section-15.html">
-          <p class="card-eyebrow">Section 15</p>
-          <h2>Salaries</h2>
-          <p>Tax treatment of income from salary, including allowances, perquisites, and deductions available to salaried employees under the Income Tax Act.</p>
-          <span class="card-arrow">Read section →</span>
-        </a>
-
-        <a class="section-card" href="income-from-house-property-section-22-to-27.html">
-          <p class="card-eyebrow">Sections 22–27</p>
-          <h2>Income from House Property</h2>
-          <p>Taxation of rental income, annual value computation, interest deductions on home loans, and related provisions under the Income Tax Act.</p>
-          <span class="card-arrow">Read section →</span>
-        </a>
-
-        <a class="section-card" href="income-from-other-sources-section-56-to-59.html">
-          <p class="card-eyebrow">Sections 56–59</p>
-          <h2>Income from Other Sources</h2>
-          <p>Covers dividends, interest, rental income from movable property, winnings, and other miscellaneous income not falling under the other four heads.</p>
-          <span class="card-arrow">Read section →</span>
-        </a>
-
-        <a class="section-card" href="Post-23-07-2024 Tax Changes.html">
-          <p class="card-eyebrow">Tax Updates</p>
-          <h2>Post 23-07-2024 Tax Changes</h2>
-          <p>Summary of tax changes and amendments introduced after 23rd July 2024.</p>
-          <span class="card-arrow">Read section →</span>
-        </a>
-
-      </div>
-
-    </main>
+  <div class="header">
+    <h1>Direct Tax — Income Tax Notes</h1>
+    <div class="sub">AY 2026-27 · Revision Notes & Study Material</div>
   </div>
+
+  <div class="section-title"><span class="num">01</span> Income Tax Notes</div>
+  <div class="link-list">
+    <div class="link-item">
+      <a href="salary-income-tax-section-15.html">
+        <span class="link-title">Salaries — Income Tax | Sec. 15</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="link-item">
+      <a href="income-from-house-property-section-22-to-27.html">
+        <span class="link-title">Income from House Property — Income Tax</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="link-item">
+      <a href="income-from-other-sources-section-56-to-59.html">
+        <span class="link-title">Income from Other Sources — Income Tax</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="link-item">
+      <a href="capital-gains-exemptions.html">
+        <span class="link-title">Revision Note — Deductions Under Capital Gains</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="num">02</span> Perquisites & RFA</div>
+  <div class="link-list">
+    <div class="link-item">
+      <a href="perquisites-cheatsheet.html">
+        <span class="link-title">Perquisites – Sec. 17(2) | PY 2024–25 Topper Notes</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="link-item">
+      <a href="rfa-notes.html">
+        <span class="link-title">RFA Revision Note</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="num">03</span> Tax Changes</div>
+  <div class="link-list">
+    <div class="link-item">
+      <a href="post-23-07-2024-tax-changes.html">
+        <span class="link-title">Post-23-07-2024 Tax Changes — Revision Chart</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bottom-note">
+    Direct Tax — AY 2026-27
+  </div>
+
 </div>
-
-<script>
-  // Mobile sidebar toggle
-  const menuToggleBtn = document.getElementById('menu-toggle-btn');
-  const sidebarNav = document.getElementById('sidebar-nav');
-  const mobileBackdrop = document.getElementById('mobile-backdrop');
-
-  function toggleMobileMenu() {
-    const isOpen = sidebarNav.classList.toggle('open');
-    mobileBackdrop.classList.toggle('open');
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  }
-
-  menuToggleBtn.addEventListener('click', toggleMobileMenu);
-  mobileBackdrop.addEventListener('click', toggleMobileMenu);
-</script>
-
 </body>
 </html>
